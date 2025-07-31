@@ -164,6 +164,80 @@
     width: 36px;
     height: 36px;
   }
+.fulltext-heading img {
+  width: 50%;
+  display: block;
+  
+}
+
+.legacy-subtext {
+  text-align: left;
+  font-size: 14px;
+  /* only left padding */
+  margin: -80px 0 20px 0; /* reduce top spacing from image */
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.legacy-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+
+.legacy-form input[type="text"],
+.legacy-form input[type="email"],
+.legacy-form input[type="tel"] {
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  background: #e9e0cc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  color: #333;
+}
+
+.checkbox-label input {
+  margin-right: 6px;
+  margin-top: 3px;
+}
+
+.checkbox-label a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.legacy-button {
+  background: #c1a15b;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.legacy-button img.button-bg {
+  display: none; /* hide decorative background in mobile */
+}
+
+.legacy-button img:last-child {
+  width: 18px;
+  height: auto;
+}
 }
 
   </style>
