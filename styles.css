@@ -5,15 +5,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
 }
 
-body, html {
-  height: 100%;
+html, body {
+  overflow-x: hidden;
   width: 100%;
-   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  min-width: 1024px; /* Ensure layout stays same on laptop */
 }
 
 .playfair {

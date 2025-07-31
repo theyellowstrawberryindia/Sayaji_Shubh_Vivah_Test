@@ -62,23 +62,42 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    
     align-items: flex-start;
+    flex-direction: row; /* horizontal layout */
+    justify-content: space-between; /* pushes logo left, button right */
     padding: 24px 15px; /* Increased navbar height */
   }
 
   .start-planning {
-    margin-top: 10px;
     font-size: 14px;
     padding: 6px 10px;
+    white-space: nowrap;
+  }
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1; /* take up space on the left */
   }
 
-  .hero {
-    background-position: center;
-    height: 100vh;
-    justify-content: center;
-    padding: 20px;
+    .logo img {
+    height: 32px;
+    width: auto;
   }
+  .hero {
+    background: url('assets/hero_image.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: #000;
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
 
   .content {
     text-align: center;
