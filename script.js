@@ -17,3 +17,15 @@
     }
     showWhatsApp = !showWhatsApp;
   }, 5000); // 5 seconds toggle
+
+   const track = document.querySelector('.carousel-track');
+  const nextBtn = document.querySelector('.next-btn');
+  const prevBtn = document.querySelector('.prev-btn');
+
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -320, behavior: 'smooth' });
+  });
