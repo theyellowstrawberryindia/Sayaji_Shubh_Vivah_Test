@@ -330,6 +330,7 @@ html, body {
   display: flex;
   align-items: center;
   font-size: clamp(12px, 2.5vw, 14px);
+  font-family: "Source Sans Pro", sans-serif;
   color: #000000;
   gap: 6px;
 }
