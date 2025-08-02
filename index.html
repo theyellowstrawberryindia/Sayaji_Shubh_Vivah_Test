@@ -140,15 +140,16 @@
     margin-top: 16px;
     background-color: #c1a15b;
     color: white;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding: 10px 2px;
     border: none;
    
-    font-size: 14px;
+    font-size: 16px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-  }.call-btn img {
+  }
+  .call-btn img {
     height: 18px;
     width: auto;
   }
@@ -186,7 +187,9 @@
   gap: 12px;
   
 }
-
+ .legacy-button img {
+    width: 25px; /* Larger scaling on smaller screens */
+  }
 .legacy-form input[type="text"],
 .legacy-form input[type="email"],
 .legacy-form input[type="tel"] {
@@ -218,9 +221,9 @@
 .legacy-button {
   background: #c1a15b;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   padding: 12px;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   
   position: relative;
@@ -291,6 +294,38 @@
 
  
 }
+@media (max-width: 768px) {
+ .stats-bar-overlay{
+  min-height:0;
+  margin-top: 10px;
+ }
+  .stats-bar-overlay .stat {
+    padding: 10px 0;         /* Reduced vertical padding */
+               /* Remove fixed height */
+  }
+
+  .stats-bar-overlay .stat strong {
+    font-size: 28px; /* Adjust font-size for mobile */
+  }
+
+  .stats-bar-overlay .stat span {
+    font-size: 18px; /* Adjust subtitle size for mobile */
+  }
+ .floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 16px; /* ✅ placed on the right */
+    left: auto;  /* ✅ remove any left positioning */
+    z-index: 999;
+  }
+
+  .floating-icons button img {
+    width: clamp(30px, 20vw, 100px);
+    height: clamp(30px, 14vw, 100px);
+    transform: translate(0, -6px); /* slightly move up if needed */
+  }
+}
+
   </style>
 
   </section>
@@ -330,8 +365,9 @@
         </label>
         <button type="submit" class="legacy-button">
   <!-- <img src="assets/hover_button_gold.png" alt="Design" class="button-bg"> -->
+    <img src="assets/phone.svg" alt="Phone Icon">
   <span>Get In Touch</span>
-  <img src="assets/phone.svg" alt="Phone Icon">
+
 </button>
 
       </form>
@@ -555,6 +591,11 @@
 
 <!-- STYLE -->
 <style>
+  .styled-city-dropdown::placeholder {
+  color: #d7c6a3;
+  opacity: 1; /* ensure full opacity */
+}
+
 .moments-carousel-section {
   padding: 60px 100px;
   position: relative;
@@ -634,60 +675,64 @@
   color: #333;
   margin-top: 1px;
 }
-
-/* Tablet: Show ~2.5 cards */
-@media (max-width: 1024px) {
-  .carousel-card {
-    width: 280px;
-    height: 480px;
-  }
-
-  .carousel-card img {
-    height: 420px;
-  }
-
-  .carousel-track {
-    gap: 40px;
-  }
-}
-
-/* Mobile: Show 1 full-width card */
 @media (max-width: 768px) {
   .moments-carousel-section {
-    padding: 40px 20px;
+    padding: 40px 16px;
   }
-
+   .carousel-controls {
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 8px; /* optional: slight spacing from edge */
+    margin-top: 12px;
+  }
   .carousel-header {
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 20px;
+    gap: 16px;
   }
 
   .main-title-image {
-    width: 220px;
+    width: 200px;
   }
 
   .carousel-track-wrapper {
-    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
   }
 
   .carousel-track {
-    gap: 20px;
+    display: flex;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-left: 4px;
   }
 
   .carousel-card {
-    width: 90vw;
+    flex: 0 0 80vw; /* 80% of viewport width */
     height: auto;
+    scroll-snap-align: start;
+    background: #fff;
+    padding-top: 10px; /* ✅ added */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    /* ✅ border-radius removed */
   }
 
   .carousel-card img {
-    height: 300px;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
   }
 
   .carousel-card p {
     font-size: 20px;
+    margin: 8px 0;
   }
 }
+
 </style>
 
 
@@ -856,7 +901,22 @@
         </h2>
 
      <div class="form-grid">
-  <div class="input-wrapper"><div class="form-grid">
+  <!-- New Fields at the Top -->
+<div class="input-wrapper">
+  <div class="dropdown-wrapper-new">
+    <input type="text" class="styled-city-dropdown" placeholder="Your Name" />
+    <!-- No arrow image here -->
+  </div>
+</div>
+
+<div class="input-wrapper">
+  <div class="dropdown-wrapper-new">
+    <input type="tel" class="styled-city-dropdown" placeholder="Phone Number" />
+    <!-- No arrow image here -->
+  </div>
+</div>
+
+  <!-- Existing Dropdowns Below -->
   <div class="input-wrapper">
     <div class="dropdown-wrapper-new">
       <select class="styled-city-dropdown">
@@ -929,6 +989,7 @@
     </div>
   </div>
 </div>
+
 
 
         <div class="form-checkbox">
@@ -1034,6 +1095,7 @@
   .input-wrapper {
   position: relative;
 }
+
 .dropdown-wrapper-new{
   position: relative;
   width: 320px;
@@ -1113,9 +1175,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap:  0px; /* vertical gap smaller, horizontal gap wider */
 }
-
 .form-grid select,
-.form-grid input[type="date"] {
+.form-grid input[type="date"],
+.form-grid input[type="text"],
+.form-grid input[type="tel"] {
   max-width: 410px; /* or any smaller width you prefer */
   height: 62px;
   width: 100%;
@@ -1130,6 +1193,7 @@
   appearance: none;
   outline: none;
 }
+
 
 
 .form-checkbox a {
@@ -1252,7 +1316,9 @@
   .form-section {
     padding: 40px 16px;
   }
-
+   .form-section {
+    padding: 0 4rem; /* 40px */
+  }
   .form-content {
     flex-direction: column;
     gap: 32px;
@@ -1265,7 +1331,11 @@
     margin: 0 auto;
     display: block;
   }
-
+  .enquiry-wrapper-new {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
   .form-heading,
   .consultation-text {
     text-align: center;
@@ -1280,7 +1350,8 @@
   }
 
   .form-grid select,
-  .form-grid input[type="date"] {
+  .form-grid.form-grid input[type="text"],
+.form-grid input[type="tel"] {
     font-size: 16px;
     height: 48px;
     max-width: 100%;
@@ -1626,11 +1697,12 @@
   }
 
   .clip-overlay {
-    width: 40px;
+    width: 50px;
     height: auto;
     position: absolute;
-    top: -20px;
+    top: -10px;
     left: -10px;
+     opacity: 0.6;
   }
 
   .testimonial-author {
@@ -1717,10 +1789,10 @@
   }
 
   .offer-text {
-    width: 243px;
-    height: 42px;
+    width: 263px;
+    height: 53px;
     font-size: 13px; /* scaled to fit 42px height */
-    line-height: 1.2;
+    
     overflow: hidden;
 
     /* text-overflow: ellipsis;
@@ -1819,10 +1891,7 @@
     align-items: flex-start;
     gap: 30px;
   }
- .enquiry-wrapper {
-    max-width: 180px; /* or a smaller width */
-    aspect-ratio: 244 / 98.28;
-  }
+
   .celebrate-left {
     flex-direction: column;
     align-items: flex-start;
@@ -1924,14 +1993,14 @@
 
 .flower-left-decor {
   position: absolute;
-  left: -10px;
+  left: -30px;
   top: 0;
-  transform: translateY(139%);
+  transform: translateY(100%);
   width: 200px;
   height: auto;
-  z-index: 10; /* Increased to bring it above */
+  z-index: -999; /* Increased to bring it above */
   pointer-events: none;
-}
+} 
 
 
 

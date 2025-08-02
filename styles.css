@@ -89,7 +89,7 @@ html, body {
   height: clamp(36px, 8vw, 60px); /* reduced height */
   justify-content: center;
  font-size: clamp(13px, 2vw, 23px); /* smaller font size */
-
+  font-family: sans-serif;
   background: #fff7e6;
 }
 
@@ -97,7 +97,12 @@ html, body {
     width: 24px;
     height: 24px;
 }
-
+@media (max-width: 768px) {
+  .start-planning img.call-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
 .start-planning::before {
   content: "";
   position: absolute;
@@ -170,13 +175,13 @@ html, body {
 }
 
 .floating-icons {
-  position: absolute;
+  position: fixed; /* 🔁 changed from absolute */
   bottom: clamp(15px, 3vw, 30px);
   right: clamp(15px, 3vw, 30px);
   display: flex;
   flex-direction: column;
   gap: 15px;
-  z-index: 2;
+  z-index: 9999; /* ensure it's above all content */
 }
 
 .floating-icons button {
@@ -197,6 +202,7 @@ html, body {
   width: clamp(40px, 10vw, 80px);
   height: clamp(40px, 10vw, 80px);
 }
+
 
 .legacy-section {
   font-family: 'Playfair Display', serif;
@@ -364,6 +370,12 @@ html, body {
 .legacy-button img:last-child {
   position: relative;
   z-index: 1;
+}
+.legacy-button img {
+  width: 30px;  /* or adjust as needed */
+  height: 32px;
+  margin-right: 4px; /* optional spacing between icon and text */
+  vertical-align: middle; /* aligns it nicely with text */
 }
 
 .legacy-button:hover {
