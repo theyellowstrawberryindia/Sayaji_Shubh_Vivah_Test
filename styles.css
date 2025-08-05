@@ -94,8 +94,8 @@ html, body {
 }
 
 .start-planning img.call-icon {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
 }
 @media (max-width: 768px) {
   .start-planning img.call-icon {
@@ -103,6 +103,15 @@ html, body {
     height: 16px;
   }
 }
+<<<<<<< HEAD
+=======
+@media (max-width: 768px) {
+  .start-planning img.call-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+>>>>>>> abd4cc4bc0a0d4d88b0e45da53c3efae34fa682e
 .start-planning::before {
   content: "";
   position: absolute;
@@ -156,8 +165,8 @@ html, body {
 }
 
 .call-btn img {
-  width: clamp(20px, 5vw, 30px);
-  height: clamp(20px, 5vw, 30px);
+  width: 24px;
+  height: 24px;
 }
 
 .call-btn::before {
@@ -186,8 +195,8 @@ html, body {
 }
 
 .floating-icons button {
-  width: clamp(50px, 12vw, 90px);
-  height: clamp(50px, 12vw, 90px);
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background: #fff7e6;
   display: flex;
@@ -200,8 +209,8 @@ html, body {
 }
 
 .floating-icons button img {
-  width: clamp(40px, 10vw, 80px);
-  height: clamp(40px, 10vw, 80px);
+  width:60px;
+  height: 60px;
 }
 
 
@@ -376,8 +385,13 @@ html, body {
   z-index: 1;
 }
 .legacy-button img {
+<<<<<<< HEAD
+  width: 24px;  /* or adjust as needed */
+  height: 24px;
+=======
   width: 30px;  /* or adjust as needed */
   height: 32px;
+>>>>>>> abd4cc4bc0a0d4d88b0e45da53c3efae34fa682e
   margin-right: 4px; /* optional spacing between icon and text */
   vertical-align: middle; /* aligns it nicely with text */
 }
