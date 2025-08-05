@@ -103,6 +103,12 @@ html, body {
     height: 16px;
   }
 }
+@media (max-width: 768px) {
+  .start-planning img.call-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
 .start-planning::before {
   content: "";
   position: absolute;
@@ -222,7 +228,7 @@ html, body {
 .legacy-left {
   flex: 1;
   max-width: 100%;
-  padding: clamp(30px, 5vw, 60px) clamp(20px, 5vw, 90px);
+  padding: clamp(30px, 5vw, 30px) clamp(20px, 5vw, 60px);
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -256,7 +262,7 @@ html, body {
 }
 .fulltext-heading {
   width: 397px;
-  height: 170px;
+  /* height: 170px; */
   position: relative;
   top: 0; /* You can adjust this if needed */
   left: 0;
@@ -265,7 +271,7 @@ html, body {
 }
 
 .fulltext-heading img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
 }
@@ -458,7 +464,7 @@ html, body {
 .stats-bar-overlay .stat span {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  font-size: clamp(20px, 4vw, 40px);
+  font-size: clamp(20px, 4vw, 30px);
   line-height: 100%;
   color: #342d28;
   font-variant-numeric: lining-nums proportional-nums;
