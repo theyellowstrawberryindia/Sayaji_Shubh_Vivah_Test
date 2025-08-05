@@ -231,7 +231,7 @@ html, body {
 .legacy-left {
   flex: 1;
   max-width: 100%;
-  padding: clamp(30px, 5vw, 60px) clamp(20px, 5vw, 90px);
+  padding: clamp(30px, 5vw, 30px) clamp(20px, 5vw, 60px);
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -265,7 +265,7 @@ html, body {
 }
 .fulltext-heading {
   width: 397px;
-  height: 170px;
+  /* height: 170px; */
   position: relative;
   top: 0; /* You can adjust this if needed */
   left: 0;
@@ -274,7 +274,7 @@ html, body {
 }
 
 .fulltext-heading img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
 }
@@ -385,13 +385,8 @@ html, body {
   z-index: 1;
 }
 .legacy-button img {
-<<<<<<< HEAD
   width: 24px;  /* or adjust as needed */
   height: 24px;
-=======
-  width: 30px;  /* or adjust as needed */
-  height: 32px;
->>>>>>> abd4cc4bc0a0d4d88b0e45da53c3efae34fa682e
   margin-right: 4px; /* optional spacing between icon and text */
   vertical-align: middle; /* aligns it nicely with text */
 }
@@ -472,7 +467,7 @@ html, body {
 .stats-bar-overlay .stat span {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  font-size: clamp(20px, 4vw, 40px);
+  font-size: clamp(20px, 4vw, 30px);
   line-height: 100%;
   color: #342d28;
   font-variant-numeric: lining-nums proportional-nums;
