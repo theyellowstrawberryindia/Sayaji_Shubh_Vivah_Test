@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wedding Carousel</title>
+  <style>
+    /* === Animations === */
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+
+    @keyframes slideOutLeft {
+      from {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      to {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+    }
+
+    .slide-in-right {
+      animation: slideInRight 0.5s ease forwards;
+    }
+
+    .slide-out-left {
+      animation: slideOutLeft 0.5s ease forwards;
+    }
+
+    /* === Global Reset === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Work Sans', sans-serif;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    .moments-carousel-section {
+      width: 100%;
+      padding: 2rem 1rem;
+      overflow: hidden;
+    }
+
+    .carousel-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .main-title-image {
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .carousel-track-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .wedding-carousel {
+      width: 100%;
+      max-width: 120rem;
+    }
+
+    .carousel-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: nowrap;
+    }
+
+    .carousel-side {
+      flex: 1;
+      max-width: 20%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .preview-image {
+      width: 100%;
+      height: 25rem;
+      object-fit: cover;
+      margin: 0.5rem auto;
+      border-radius: 0.5rem;
+    }
+
+    .arrow-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .arrow-button img {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    .carousel-center {
+      flex: 2;
+      max-width: 60%;
+      text-align: center;
+      position: relative;
+    }
+
+    .carousel-center img {
+      width: 100%;
+      height: 36rem;
+      object-fit: cover;
+      border-radius: 1rem;
+      opacity: 1;
+    }
+
+    #carousel-title {
+      font-size: 2rem;
+      margin-top: 1rem;
+      color: #B8894D;
+    }
+
+    #carousel-caption {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #555;
+    }
+
+    .side-label {
+      font-size: 1.4rem;
+      color: #B8894D;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+.carousel-center img {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.carousel-center img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fade animation classes */
+.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Side previews transition */
+.carousel-side img {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+    .dot {
+      width: 1.5rem;
+      height: 0.4rem;
+      border-radius: 0.5rem;
+      background-color: #999;
+      opacity: 0.9;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .carousel-indicators .dot.active {
+      background-color: #B68B48;
+      width: 2rem;
+    }
+
+    .background-flower {
+      display: none;
+    }
+    .carousel-arrow img {
+  display: none;
+    }
+
+    /* === Mobile Responsive View === */
+    @media (max-width: 640px) {
+      .carousel-side {
+        display: none;
+      }
+
+      .carousel-center {
+        max-width: 100%;
+      }
+
+      .carousel-center img {
+        width: 100%;
+        max-width: 32rem;
+        height: 20rem;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+
+      .arrow-button {
+        display: block;
+      }
+
+      .carousel-indicators {
+        margin-top: 1rem;
+      }
+
+      .main-title-image {
+        width: 100%;
+        height: auto;
+      }
+
+      #carousel-title {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+      }
+
+      #carousel-caption {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+    }
+
+/* Hide on larger screens */
+
+  </style>
+</head>
+<body>
+  <section class="moments-carousel-section">
+    <div class="carousel-header">
+      <img src="assets/wecreate.png" alt="We Celebrate Every Moment" class="main-title-image" />
+    </div>
+
+    <div class="carousel-track-wrapper">
+      <section class="wedding-carousel">
+        <div class="carousel-wrapper">
+          <!-- Left Side -->
+          <div class="carousel-side left">
+            <button class="arrow-button" onclick="prevSlide()">
+              <img src="assets/arrow-left.svg" alt="Left Arrow" />
+            </button>
+            <img id="prev-preview" class="preview-image" src="assets/We_Celebrate_2.jpeg" alt="Previous Preview" />
+            <span class="side-label">PREVIOUS<br>IMAGE</span>
+          </div>
+
+          <!-- Center -->
+          <div class="carousel-center">
+          
+            <img id="carousel-image" src="assets/We_Celebrate_1.jpg" alt="Wedding" />
+           
+            <h3 id="carousel-title">ROYAL PALACE WEDDINGS</h3>
+            <p id="carousel-caption">Some description about the wedding theme shown above.</p>
+          </div>
+
+          <!-- Right Side -->
+          <div class="carousel-side right">
+            <span class="side-label">NEXT<br>IMAGE</span>
+            <img id="next-preview" class="preview-image" src="assets/We_Celebrate_4.jpg" alt="Next Preview" />
+            <button class="arrow-button" onclick="nextSlide()">
+              <img src="assets/arrow-right.svg" alt="Right Arrow" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators"></div>
+    <img src="assets/flower.svg" alt="Flower Decoration" class="background-flower" />
+  </section>
+
+
+    <script>
+  const images = [
+    { src: "assets/We_Celebrate_2.jpeg", title: "ROYAL PALACE WEDDINGS", caption: "Some description about the wedding theme shown above." },
+    { src: "assets/We_Celebrate_3.jpg", title: "BEACH WEDDINGS", caption: "A sunny celebration with waves and sand all around." },
+    { src: "assets/We_Celebrate_4.jpg", title: "MOUNTAIN VOWS", caption: "Serene mountain backdrops for your special day." },
+    { src: "assets/We_Celebrate_5.jpeg", title: "CITY CELEBRATIONS", caption: "Weddings in iconic city locations." },
+    { src: "assets/We_Celebrate_6.jpg", title: "DESERT DREAMS", caption: "Golden sands and traditional vibes." },
+    { src: "assets/We_Celebrate_7.jpg", title: "GARDEN BLOOM", caption: "Nature-inspired floral wedding setup." }
+  ];
+
+  let currentIndex = 0;
+  let autoSlideInterval;
+
+  const imageEl = document.getElementById("carousel-image");
+  const titleEl = document.getElementById("carousel-title");
+  const captionEl = document.getElementById("carousel-caption");
+  const prevPreview = document.getElementById("prev-preview");
+  const nextPreview = document.getElementById("next-preview");
+
+  function updateIndicators(index) {
+    document.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  function animateImageChange(newIndex) {
+    // Animate center image
+    imageEl.classList.remove("active");
+    imageEl.classList.add("fade-out");
+
+    // Animate side previews
+    prevPreview.classList.add("fade-out");
+    nextPreview.classList.add("fade-out");
+
+    setTimeout(() => {
+      const { src, title, caption } = images[newIndex];
+      const prevIndex = (newIndex - 1 + images.length) % images.length;
+      const nextIndex = (newIndex + 1) % images.length;
+
+      // Update content
+      imageEl.src = src;
+      titleEl.textContent = title;
+      captionEl.textContent = caption;
+      prevPreview.src = images[prevIndex].src;
+      nextPreview.src = images[nextIndex].src;
+
+      // Trigger fade-in
+      imageEl.classList.remove("fade-out");
+      prevPreview.classList.remove("fade-out");
+      nextPreview.classList.remove("fade-out");
+
+      imageEl.classList.add("fade-in");
+      prevPreview.classList.add("fade-in");
+      nextPreview.classList.add("fade-in");
+
+      updateIndicators(newIndex);
+
+      // After fade-in, restore normal class
+      setTimeout(() => {
+        imageEl.classList.remove("fade-in");
+        imageEl.classList.add("active");
+      }, 100);
+    }, 300);
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    animateImageChange(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    animateImageChange(currentIndex);
+  }
+
+  function startAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(nextSlide, 5000);
+  }
+
+  // Touch swipe
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+  }
+
+  function handleTouchMove(event) {
+    touchEndX = event.touches[0].clientX;
+  }
+
+  function handleTouchEnd() {
+    const swipeDistance = touchEndX - touchStartX;
+    if (swipeDistance > 50) {
+      prevSlide();
+      startAutoSlide();
+    } else if (swipeDistance < -50) {
+      nextSlide();
+      startAutoSlide();
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
+    indicatorsContainer.innerHTML = '';
+
+    images.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if (i === currentIndex) dot.classList.add('active');
+
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        animateImageChange(currentIndex);
+        startAutoSlide();
+      });
+
+      indicatorsContainer.appendChild(dot);
+    });
+
+    animateImageChange(currentIndex);
+    startAutoSlide();
+
+    const carouselCenter = document.querySelector('.carousel-center');
+    carouselCenter.addEventListener('touchstart', handleTouchStart, false);
+    carouselCenter.addEventListener('touchmove', handleTouchMove, false);
+    carouselCenter.addEventListener('touchend', handleTouchEnd, false);
+  });
+</script>
+
+
+</body>
+</html>
