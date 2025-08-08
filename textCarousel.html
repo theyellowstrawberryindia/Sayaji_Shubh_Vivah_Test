@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Wedding Carousel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+<body>
+
+<section class="moments-carousel-section">
+  <!-- Title Row -->
+  <div class="carousel-header">
+    <img src="https://via.placeholder.com/280x80/B8894D/ffffff?text=We+Celebrate+Every+Moment" alt="We Celebrate Every Moment" class="main-title-image" />
+  </div>
+
+  <!-- Carousel Section -->
+  <div class="carousel-track-wrapper">
+    <section class="wedding-carousel">
+      <div class="carousel-wrapper">
+
+        <!-- Left Side -->
+        <div class="carousel-side left">
+          <button class="arrow-button" onclick="prevSlide()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+          <img
+            id="prev-preview"
+            class="preview-image"
+            src="https://via.placeholder.com/300x400/8B7355/ffffff?text=Previous"
+            alt="Previous Preview"
+          />
+        </div>
+
+        <!-- Center -->
+        <div class="carousel-center">
+          <img
+            id="carousel-image"
+            class="main-image active"
+            src="https://via.placeholder.com/600x576/B8894D/ffffff?text=Royal+Palace+Wedding"
+            alt="Wedding"
+          />
+          <h3 id="carousel-title">ROYAL PALACE WEDDINGS</h3>
+          <p id="carousel-caption">Some description about the wedding theme shown above.</p>
+        </div>
+
+        <!-- Right Side -->
+        <div class="carousel-side right">
+          <img
+            id="next-preview"
+            class="preview-image"
+            src="https://via.placeholder.com/300x400/8B7355/ffffff?text=Next"
+            alt="Next Preview"
+          />
+          <button class="arrow-button" onclick="nextSlide()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  
+  <div class="carousel-indicators">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+<script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+<style>
+/* === Enhanced Animations === */
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.9);
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes textSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation classes */
+.slide-in-right {
+  animation: slideInFromRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.slide-out-left {
+  animation: slideOutToLeft 0.8s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
+}
+
+.slide-out-right {
+  animation: slideOutToRight 0.8s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
+}
+
+.fade-in {
+  animation: fadeInScale 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.fade-out {
+  animation: fadeOutScale 0.8s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
+}
+
+.text-slide-up {
+  animation: textSlideUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.moments-carousel-section {
+  width: 100%;
+  padding: 2rem 1rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+}
+
+.carousel-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.main-title-image {
+  max-width: 80%;
+  height: auto;
+  display: block;
+}
+
+.carousel-track-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.wedding-carousel {
+  width: 100%;
+  max-width: 120rem;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.carousel-side {
+  flex: 1;
+  max-width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.preview-image {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.preview-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(184, 137, 77, 0.9);
+  border-radius: 50%;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.arrow-button:hover {
+  background: rgba(184, 137, 77, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 20px rgba(184, 137, 77, 0.3);
+}
+
+.carousel-side.left .arrow-button {
+  left: -30px;
+}
+
+.carousel-side.right .arrow-button {
+  right: -30px;
+}
+
+.carousel-center {
+  flex: 2;
+  max-width: 60%;
+  text-align: center;
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  height: 36rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.main-image.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#carousel-title {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #B8894D;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+#carousel-caption {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #555;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 1.5rem;
+  height: 0.4rem;
+  border-radius: 0.5rem;
+  background-color: #ccc;
+  opacity: 0.7;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s;
+}
+
+.dot:hover::before {
+  left: 100%;
+}
+
+.carousel-indicators .dot.active {
+  background: linear-gradient(45deg, #B68B48, #D4AF37);
+  width: 2.5rem;
+  opacity: 1;
+  box-shadow: 0 2px 10px rgba(182, 139, 72, 0.3);
+}
+
+/* === Mobile Responsive View === */
+@media (max-width: 640px) {
+  .carousel-side {
+    display: none;
+  }
+
+  .carousel-center {
+    max-width: 100%;
+  }
+
+  .main-image {
+    width: 100%;
+    max-width: 32rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  .arrow-button {
+    display: block;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+  }
+
+  .carousel-side.left .arrow-button {
+    left: 10px;
+  }
+
+  .carousel-side.right .arrow-button {
+    right: 10px;
+  }
+
+  .carousel-indicators {
+    margin-top: 1rem;
+  }
+
+  .main-title-image {
+    width: 100%;
+    height: auto;
+  }
+
+  #carousel-title {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+
+  #carousel-caption {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Enhanced hover effects */
+.carousel-wrapper:hover .preview-image {
+  transform: scale(1.02);
+}
+
+.carousel-wrapper:hover .main-image {
+  transform: scale(1.01);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+}
+
+</style>
+
+<script>
+const images = [
+  { 
+    src: "assets/1.jpg", 
+    title: "ROYAL PALACE WEDDINGS", 
+    caption: "Elegant ceremonies in majestic palace settings with timeless grandeur." 
+  },
+  { 
+    src: "assets/2.jpg", 
+    title: "BEACH WEDDINGS", 
+    caption: "A sunny celebration with waves and sand creating magical moments." 
+  },
+  { 
+    src: "assets/3.jpg", 
+    title: "MOUNTAIN VOWS", 
+    caption: "Serene mountain backdrops for your special day surrounded by nature." 
+  },
+  { 
+    src: "assets/4.jpg", 
+    title: "CITY CELEBRATIONS", 
+    caption: "Weddings in iconic city locations with urban sophistication." 
+  },
+  { 
+    src: "assets/5.jpg", 
+    title: "DESERT DREAMS", 
+    caption: "Golden sands and traditional vibes under starlit skies." 
+  },
+  { 
+    src: "assets/6.jpg", 
+    title: "GARDEN BLOOM", 
+    caption: "Nature-inspired floral wedding setup in blooming gardens." 
+  }
+];
+
+
+let currentIndex = 0;
+let autoSlideInterval;
+let isAnimating = false;
+let slideDirection = 'next'; // Track slide direction
+
+const imageEl = document.getElementById("carousel-image");
+const titleEl = document.getElementById("carousel-title");
+const captionEl = document.getElementById("carousel-caption");
+const prevPreview = document.getElementById("prev-preview");
+const nextPreview = document.getElementById("next-preview");
+
+function updateIndicators(index) {
+  document.querySelectorAll('.dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+function animateImageChange(newIndex, direction = 'next') {
+  if (isAnimating) return;
+  isAnimating = true;
+  slideDirection = direction;
+
+  // Remove any existing animation classes
+  imageEl.classList.remove('slide-in-right', 'slide-in-left', 'slide-out-left', 'slide-out-right', 'fade-in', 'fade-out');
+  prevPreview.classList.remove('slide-in-right', 'slide-in-left', 'fade-in', 'fade-out');
+  nextPreview.classList.remove('slide-in-right', 'slide-in-left', 'fade-in', 'fade-out');
+  titleEl.classList.remove('text-slide-up');
+  captionEl.classList.remove('text-slide-up');
+
+  // Start exit animations
+  if (direction === 'next') {
+    imageEl.classList.add('slide-out-left');
+    prevPreview.classList.add('fade-out');
+    nextPreview.classList.add('fade-out');
+  } else {
+    imageEl.classList.add('slide-out-right');
+    prevPreview.classList.add('fade-out');
+    nextPreview.classList.add('fade-out');
+  }
+
+  // Hide text immediately
+  titleEl.style.opacity = '0';
+  titleEl.style.transform = 'translateY(30px)';
+  captionEl.style.opacity = '0';
+  captionEl.style.transform = 'translateY(30px)';
+
+  setTimeout(() => {
+    const { src, title, caption } = images[newIndex];
+    const prevIndex = (newIndex - 1 + images.length) % images.length;
+    const nextIndex = (newIndex + 1) % images.length;
+
+    // Update content
+    imageEl.src = src;
+    titleEl.textContent = title;
+    captionEl.textContent = caption;
+prevPreview.src = `assets/${prevIndex + 1}.jpg`;
+nextPreview.src = `assets/${nextIndex + 1}.jpg`;
+
+
+    // Remove exit animation classes
+    imageEl.classList.remove('slide-out-left', 'slide-out-right');
+    prevPreview.classList.remove('fade-out');
+    nextPreview.classList.remove('fade-out');
+
+    // Start entrance animations
+    if (direction === 'next') {
+      imageEl.classList.add('slide-in-right');
+    } else {
+      imageEl.classList.add('slide-in-left');
+    }
+    
+    prevPreview.classList.add('fade-in');
+    nextPreview.classList.add('fade-in');
+
+    updateIndicators(newIndex);
+
+    // Animate text after a slight delay
+    setTimeout(() => {
+      titleEl.classList.add('text-slide-up');
+      titleEl.style.opacity = '1';
+      titleEl.style.transform = 'translateY(0)';
+      
+      setTimeout(() => {
+        captionEl.classList.add('text-slide-up');
+        captionEl.style.opacity = '1';
+        captionEl.style.transform = 'translateY(0)';
+      }, 150);
+    }, 300);
+
+    // Clean up animation classes
+    setTimeout(() => {
+      imageEl.classList.remove('slide-in-right', 'slide-in-left');
+      prevPreview.classList.remove('fade-in');
+      nextPreview.classList.remove('fade-in');
+      titleEl.classList.remove('text-slide-up');
+      captionEl.classList.remove('text-slide-up');
+      imageEl.classList.add('active');
+      isAnimating = false;
+    }, 800);
+  }, 400);
+}
+
+function nextSlide() {
+  if (isAnimating) return;
+  const newIndex = (currentIndex + 1) % images.length;
+  currentIndex = newIndex;
+  animateImageChange(currentIndex, 'next');
+}
+
+function prevSlide() {
+  if (isAnimating) return;
+  const newIndex = (currentIndex - 1 + images.length) % images.length;
+  currentIndex = newIndex;
+  animateImageChange(currentIndex, 'prev');
+}
+
+function goToSlide(index) {
+  if (isAnimating || index === currentIndex) return;
+  const direction = index > currentIndex ? 'next' : 'prev';
+  currentIndex = index;
+  animateImageChange(currentIndex, direction);
+}
+
+function startAutoSlide() {
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(nextSlide, 6000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// Touch swipe functionality
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+
+function handleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+  touchStartY = event.touches[0].clientY;
+}
+
+function handleTouchMove(event) {
+  touchEndX = event.touches[0].clientX;
+  touchEndY = event.touches[0].clientY;
+  
+  // Prevent vertical scrolling during horizontal swipes
+  const deltaX = Math.abs(touchEndX - touchStartX);
+  const deltaY = Math.abs(touchEndY - touchStartY);
+  
+  if (deltaX > deltaY && deltaX > 20) {
+    event.preventDefault();
+  }
+}
+
+function handleTouchEnd() {
+  const swipeDistance = touchEndX - touchStartX;
+  const verticalDistance = Math.abs(touchEndY - touchStartY);
+  
+  // Only trigger swipe if horizontal movement is greater than vertical
+  if (Math.abs(swipeDistance) > 50 && verticalDistance < 100) {
+    stopAutoSlide();
+    
+    if (swipeDistance > 0) {
+      prevSlide();
+    } else {
+      nextSlide();
+    }
+    
+    setTimeout(startAutoSlide, 1000);
+  }
+}
+
+// Keyboard navigation
+function handleKeyDown(event) {
+  switch(event.key) {
+    case 'ArrowLeft':
+      event.preventDefault();
+      stopAutoSlide();
+      prevSlide();
+      setTimeout(startAutoSlide, 1000);
+      break;
+    case 'ArrowRight':
+      event.preventDefault();
+      stopAutoSlide();
+      nextSlide();
+      setTimeout(startAutoSlide, 1000);
+      break;
+  }
+}
+
+// Initialize carousel
+document.addEventListener("DOMContentLoaded", () => {
+  const indicatorsContainer = document.querySelector('.carousel-indicators');
+  indicatorsContainer.innerHTML = '';
+
+  // Create indicator dots
+  images.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === currentIndex) dot.classList.add('active');
+
+    dot.addEventListener('click', () => {
+      stopAutoSlide();
+      goToSlide(i);
+      setTimeout(startAutoSlide, 1000);
+    });
+
+    indicatorsContainer.appendChild(dot);
+  });
+
+  // Initialize first slide
+  const { src, title, caption } = images[currentIndex];
+  const prevIndex = (currentIndex - 1 + images.length) % images.length;
+  const nextIndex = (currentIndex + 1) % images.length;
+  
+  imageEl.src = src;
+  titleEl.textContent = title;
+  captionEl.textContent = caption;
+  prevPreview.src = `https://via.placeholder.com/300x400/8B7355/ffffff?text=Image+${prevIndex + 1}`;
+  nextPreview.src = `https://via.placeholder.com/300x400/8B7355/ffffff?text=Image+${nextIndex + 1}`;
+
+  // Show initial text with animation
+  setTimeout(() => {
+    titleEl.style.opacity = '1';
+    titleEl.style.transform = 'translateY(0)';
+    titleEl.style.transition = 'all 0.6s ease';
+    
+    setTimeout(() => {
+      captionEl.style.opacity = '1';
+      captionEl.style.transform = 'translateY(0)';
+      captionEl.style.transition = 'all 0.6s ease';
+    }, 200);
+  }, 500);
+
+  // Event listeners
+  const carouselCenter = document.querySelector('.carousel-center');
+  carouselCenter.addEventListener('touchstart', handleTouchStart, { passive: false });
+  carouselCenter.addEventListener('touchmove', handleTouchMove, { passive: false });
+  carouselCenter.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+  // Mouse hover pause/resume
+  const carouselWrapper = document.querySelector('.carousel-wrapper');
+  carouselWrapper.addEventListener('mouseenter', stopAutoSlide);
+  carouselWrapper.addEventListener('mouseleave', startAutoSlide);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', handleKeyDown);
+
+  // Start auto slide
+  startAutoSlide();
+
+  // Handle visibility change (pause when tab is not visible)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAutoSlide();
+    } else {
+      startAutoSlide();
+    }
+  });
+});
+
+// Intersection Observer for better performance
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      startAutoSlide();
+    } else {
+      stopAutoSlide();
+    }
+  });
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.moments-carousel-section');
+  if (carousel) {
+    observer.observe(carousel);
+  }
+});
+</script>
+
+</body>
+</html>

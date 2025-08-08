@@ -6,8 +6,10 @@
   <title>Shubh Vivah Replica</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -16,7 +18,7 @@
       </div>
      <div class="start-planning">
   <img src="assets/calls.svg" alt="Call Icon" class="call-icon" />
-  Start Planning
+  Enquire Now!
 </div>
 
     </nav>
@@ -37,12 +39,12 @@
 </h2>
 
 
-  <button class="call-btn">
-    <!-- Button content -->
+  <!-- <button class="call-btn">
+   
 
   <img src="assets/phone_yellow.svg" alt="Phone Icon">
   Click to Call 
-</button>
+</button> -->
 
     </div>
 
@@ -103,7 +105,7 @@
     width: auto;
   }
   .hero {
-    background: url('assets/hero_image.jpg') no-repeat center center;
+    background: url('assets/natural.jpg') no-repeat center center;
     background-size: cover;
     background-color: #000;
     height: 50vh;
@@ -137,14 +139,22 @@
     font-size: 34px;
   }
 
-    .call-btn {
-    padding: 4px 8px;
-    font-size: 14px;
-    /* gap: 4px; */
+  .call-btn {
+    margin-top: 16px;
+    background-color: #c1a15b;
+    color: white;
+    /* font-weight: bold; */
+    padding: 10px 2px;
+    border: none;
+   
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
   .call-btn img {
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: auto;
   }
 
   .floating-icons {
@@ -158,21 +168,9 @@
     width: 36px;
     height: 36px;
   }
-.fulltext-heading img {
-  width: 50%;
-  display: block;
-  padding-bottom: 60px;
-}
 
-.legacy-subtext {
-  text-align: left;
-  font-size: 14px;
-  /* only left padding */
-  margin: -80px 0 20px 0; /* reduce top spacing from image */
-  color: #333;
-  width: 100%;
-  box-sizing: border-box;
-}
+
+
 
 .legacy-form {
   display: flex;
@@ -180,11 +178,7 @@
   gap: 12px;
   
 }
- .legacy-button img {
-    width: 16px; 
-    
-    height: 16px;/* Larger scaling on smaller screens */
-  }
+
 .legacy-form input[type="text"],
 .legacy-form input[type="email"],
 .legacy-form input[type="tel"] {
@@ -192,54 +186,20 @@
   font-size: 14px;
   border: none;
   background: #e9e0cc;
-  /* border-radius: 4px; */
+  border-radius: 4px;
   width: 100%;
 }
 
-.checkbox-label {
-  display: flex;
-  align-items: flex-start;
-  font-size: 12px;
-  color: #333;
-  font-family: "Source Sans Pro", sans-serif;
-}
 
-.checkbox-label input {
-  margin-right: 6px;
-  margin-top: 3px;
-}
 
-.checkbox-label a {
-  color: #333;
-  text-decoration: underline;
-}
 
-.legacy-button {
-  background: #c1a15b;
-  color: white;
-  width: clamp(130px, 25vw, 240px);        /* Reduced max width */
-  height: clamp(40px, 10vw, 70px);   
-  font-size: 14px;
-  border: none;
-  padding: 4px 8px ;
-  position: relative;
-  display: inline-flex; /* Use inline-flex for better inline alignment */
-  justify-content: center;
-  align-items: center;
-  
 
-  white-space: nowrap; /* Prevent content from wrapping */
-}
 
-.legacy-button img.button-bg {
-           height: 16px;
-        width: 16px;
-}
 
-.legacy-button img:last-child {
-          height: 16px;
-        width: 16px;
-}
+
+
+
+
  .legacy-form-wrapper {
     display: flex;
     flex-direction: column;
@@ -247,20 +207,9 @@
     padding: 0 15px;
   }
 
-  .legacy-right {
-    display: block;
-    width: 100%;
-    padding: 0 5px; /* Optional: adjust as needed */
-  }
 
-  .legacy-right img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    box-sizing: content-box; /* Fixes overflow/collapse issue */
-  }
- 
+
+
 
   .stat {
     padding: 20px 10px;
@@ -294,22 +243,7 @@
  
 }
 @media (max-width: 768px) {
- .stats-bar-overlay{
-  min-height:0;
-  margin-top: 10px;
- }
-  .stats-bar-overlay .stat {
-    padding: 10px 0;         /* Reduced vertical padding */
-               /* Remove fixed height */
-  }
 
-  .stats-bar-overlay .stat strong {
-    font-size: 28px; /* Adjust font-size for mobile */
-  }
-
-  .stats-bar-overlay .stat span {
-    font-size: 18px; /* Adjust subtitle size for mobile */
-  }
  .floating-icons {
     position: fixed;
     bottom: 20px;
@@ -330,31 +264,14 @@
   </section>
   <!-- HTML for Legacy & Celebration Section -->
 <section class="legacy-section">
+    <div class="fulltext-heading">
+        <img src="assets/fullgroup.svg" alt="Shubh Vivah Full Text">
+      </div>
   <div class="legacy-container">
     
     <div class="legacy-left">
-      <!-- Form Section -->
-
-<div class="stats-bar-overlay">
-        <div class="stat"><strong>22</strong><span>Cities</span></div>
-        <div class="stat"><strong>30</strong><span>Hotel</span></div>
-        <div class="stat"><strong>124+</strong><span>Banquets</span></div>
-        <div class="stat"><strong>5000+</strong><span>Events Planned</span></div>
-        <div class="stat"><strong>2012</strong><span>Keys</span></div>
-      </div>
-
-<div class="fulltext-heading">
-  <img src="assets/fullgroup.svg" alt="Shubh Vivah Full Text">
-</div>
-
-
-<p class="legacy-subtext">Share your details, and our wedding expert will connect with you shortly.</p>
-
-
-
-      
-      
-      
+    
+      <p class="legacy-subtext">Share your details, and our wedding expert will connect with you shortly.</p>
       <form class="legacy-form">
         <input type="text" placeholder="Name" required>
         <input type="email" placeholder="Email" required>
@@ -363,21 +280,287 @@
           <input type="checkbox"> I agree to <a href="#">Terms & Conditions</a>.
         </label>
         <button type="submit" class="legacy-button">
-  <!-- <img src="assets/hover_button_gold.png" alt="Design" class="button-bg"> -->
-    <img src="assets/phone.svg" alt="Phone Icon">
-  <span>Get In Touch</span>
-
-</button>
-
+          <img src="assets/phone.svg" alt="Phone Icon">
+          <span>Get In Touch</span>
+        </button>
       </form>
     </div>
-
     <div class="legacy-right">
       <img src="assets/hands.png" alt="Legacy Image" class="legacy-img">
-      
+    </div>
+    <div class="stats-bar-overlay">
+      <div class="stat"><strong>22</strong><span>Cities</span></div>
+      <div class="stat"><strong>30</strong><span>Hotel</span></div>
+      <div class="stat"><strong>124+</strong><span>Banquets</span></div>
+      <div class="stat"><strong>5000+</strong><span>Events Planned</span></div>
+      <div class="stat"><strong>2012</strong><span>Keys</span></div>
     </div>
   </div>
 </section>
+<style>
+/* Reset and /* Base styles */
+.legacy-section {
+  font-family: 'Playfair Display', serif;
+  color: #3b2f2b;
+  background: #fff;
+}
+
+.legacy-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: 1500px;
+  margin: 0 auto;
+   padding-left: 20px;  /* add some horizontal padding */
+  padding-right: 20px; /* add some horizontal padding */
+}
+
+.legacy-left {
+  flex: 1;
+  max-width: 50%;
+  padding: clamp(30px, 5vw, 30px) clamp(20px, 5vw, 60px);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.fulltext-heading {
+width: 397px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+  padding: 60px 100px;
+}
+
+.fulltext-heading img {
+  /* width: 80%; */
+  height: auto;
+  display: block;
+}
+
+.legacy-subtext {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 3vw, 16px);
+  line-height: 1.4;
+  color: #342d28;
+  margin: 16px 0 24px;
+}
+
+.legacy-form {
+  width: 100%;
+  max-width: clamp(300px, 80vw, 600px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.legacy-form input[type="text"],
+.legacy-form input[type="email"],
+.legacy-form input[type="tel"] {
+  width: 100%;
+  padding: clamp(12px, 3vw, 18px) clamp(10px, 2vw, 14px);
+  font-size: clamp(14px, 3vw, 16px);
+  background-color: #e6dcc5;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #342d28;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.legacy-form input::placeholder {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #af9146;
+  font-weight: 500;
+  font-size: clamp(14px, 3vw, 20px);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: clamp(12px, 2.5vw, 14px);
+  font-family: 'Work Sans', sans-serif;
+  color: #000000;
+  gap: 6px;
+}
+
+.checkbox-label a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.legacy-button {
+  position: relative;
+  width: clamp(150px, 50%, 300px);
+  padding: clamp(12px, 3vw, 10px);
+  background: #af9146;
+  color: #FDF4EC;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(16px, 3vw, 26px);
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.legacy-button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.legacy-button:hover {
+  opacity: 0.9;
+}
+
+.legacy-right {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+}
+
+.legacy-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stats-bar-overlay {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: rgba(253, 247, 241, 1);
+  min-height: clamp(100px, 20vh, 200px);
+  z-index: 3;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stats-bar-overlay .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  flex: 1;
+  padding: clamp(20px, 5vh, 60px) 0;
+  min-width: 100px;
+  height: 100%;
+  color: #342d28;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.stats-bar-overlay .stat:hover {
+  background-color: #af9146;
+  color: #fff;
+}
+
+.stats-bar-overlay .stat:hover strong,
+.stats-bar-overlay .stat:hover span {
+  color: #fff;
+}
+
+.stats-bar-overlay .stat strong {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(30px, 6vw, 68px);
+  line-height: 100%;
+}
+
+.stats-bar-overlay .stat span {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(20px, 4vw, 30px);
+  line-height: 100%;
+  color: #342d28;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .legacy-container {
+    flex-direction: column;
+  }
+
+  .legacy-left,
+  .legacy-right {
+    max-width: 100%;
+  }
+
+  .legacy-left {
+            padding: 0px 20px 20px 20px;
+  }
+
+  .fulltext-heading {
+    width: 100%;
+    text-align: left;
+            padding: 20px 20px;
+  }
+
+  .fulltext-heading img {
+    width: 60%;
+    margin: 0px;
+  }
+
+  .legacy-form {
+    max-width: 100%;
+    margin-left:-5px;
+  }
+
+  .legacy-button {
+    width: 100%;
+    max-width: 300px;
+    /* margin: 20px auto 40px; */
+  }
+
+  .stats-bar-overlay {
+    margin-top: -20px;
+    position: relative;
+    transform: none;
+    left: 0;
+    width: 100%;
+  }
+
+  .stats-bar-overlay .stat {
+    /* min-width: 80px; */
+    padding: 20px 0;
+  }
+
+  .stats-bar-overlay .stat strong {
+    font-size: clamp(24px, 5vw, 40px);
+  }
+
+  .stats-bar-overlay .stat span {
+    font-size: clamp(16px, 3vw, 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-bar-overlay .stat {
+    /* flex: 1 1 50%; */
+    /* padding: 15px 0; */
+  }
+
+  .legacy-subtext {
+    text-align: left;
+  }
+}</style>
 <style>
   .mobile-tree {
   display: none;
@@ -495,76 +678,163 @@
 
 
 </style>
-<section class="moments-carousel-section">
-  <!-- Title + Arrows Row -->
   <div class="carousel-header">
-    <img src="assets/wecreate.png" alt="We Celebrate Every Moment" class="main-title-image" />
-
-    <div class="carousel-controls">
-      <button class="carousel-btn prev-btn">
-        <img src="assets/arrow-left.svg" alt="Previous" />
-      </button>
-      <button class="carousel-btn next-btn">
-        <img src="assets/arrow-right.svg" alt="Next" />
-      </button>
-    </div>
+    <img src="assets/weCelebrate.svg" alt="We Celebrate Every Moment" class="main-title-image" />
   </div>
-
-  <!-- Scrollable carousel container -->
-  <div class="carousel-track-wrapper">
-    <div class="carousel-track">
-      <div class="carousel-card">
-        <img src="assets/1.jpg" alt="Engagement" />
-        <p>Engagement</p>
-      </div>
-      <div class="carousel-card">
-        <img src="assets/2.jpg" alt="Cocktail Party" />
-        <p>Cocktail Party</p>
-      </div>
-      <div class="carousel-card">
-        <img src="assets/3.jpg" alt="Haldi" />
-        <p>Haldi</p>
-      </div>
-      <div class="carousel-card">
-        <img src="assets/4.jpg" alt="Sangeet" />
-        <p>Sangeet</p>
-      </div>
-      <div class="carousel-card">
-        <img src="assets/5.jpg" alt="Mehendi" />
-        <p>Mehendi</p>
-      </div>
-      <div class="carousel-card">
-        <img src="assets/6.jpg" alt="Shaadi Specialists" />
-        <p>Shaadi Specialists</p>
-      </div>
-      <div class="carousel-card">
-        <img src="assets/7.jpg" alt="Reception" />
-        <p>Reception</p>
-      </div>
-      <div class="carousel-card">
-        <img src="assets/8.jpg" alt="After Party" />
-        <p>After Party</p>
-      </div>
+    <section class="coverflow-carousel">
+      
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="assets/We_Celebrate_1.jpg" alt="Image 1"></div>
+      <div class="swiper-slide"><img src="assets/We_Celebrate_2.jpeg" alt="Image 2"></div>
+      <div class="swiper-slide"><img src="assets/We_Celebrate_3.jpg" alt="Image 3"></div>
+        <div class="swiper-slide"><img src="assets/We_Celebrate_4.JPG" alt="Image 2"></div>
+      <div class="swiper-slide"><img src="assets/We_Celebrate_5.jpeg" alt="Image 3"></div>
+        <div class="swiper-slide"><img src="assets/We_Celebrate_6.jpg" alt="Image 2"></div>
+   
     </div>
+
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+<style>
+
+    .coverflow-carousel {
+
+
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: auto;
+      padding-bottom: 20px;
+    padding-top: 20px;
+}
+.carousel-header {
+  padding: 60px 100px;
+}
+
+
+.swiper-slide {
+  width: 600px;      /* bigger width */
+  height: 475px;     /* bigger height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.swiper {
+  width: 150%;
+  max-width: 100%; /* increased from 1000px */
+  margin: auto;
+}
+
+.swiper-slide {
+  width: 900px;     /* increased width */
+  height: 500px;    /* increased height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 130%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25); /* stronger shadow for bigger size */
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #af9146;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #bfa857; /* optional: slightly brighter on hover */
+}
+@media (max-width: 768px) {
+  .swiper {
+    max-width: 620px;
+    padding: 10px;
+  }
+  .swiper-slide {
+    width: 98vw;         /* almost full viewport width */
+    height: auto;
+    max-height: 200px;   /* bigger height */
+  }
+  .swiper-slide img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+</style>
+<script>
+const swiper = new Swiper('.swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 2,
+  loop: true,
+  autoplay: {
+    delay: 4000,   // 4 seconds
+    disableOnInteraction: false,  // keep autoplay running after user interaction
+  },
+  coverflowEffect: {
+    rotate: 30,
+    stretch: 0,
+    depth: 200,
+    modifier: 1,
+    slideShadows: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+</script>
+<div class="carousel-indicators">
+
+  <span class="dot active"></span>
+  <span class="dot "></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+</div>
+
+
   </div>
 
   <img src="assets/flower.svg" alt="Flower Decoration" class="background-flower" />
 </section>
 
-<!-- SCRIPT -->
-<script>
-  const trackWrapper = document.querySelector('.carousel-track-wrapper');
-  const nextBtn = document.querySelector('.next-btn');
-  const prevBtn = document.querySelector('.prev-btn');
 
-  nextBtn.addEventListener('click', () => {
-    trackWrapper.scrollBy({ left: 318 * 1, behavior: 'smooth' }); // 298 card + 20 gap
-  });
 
-  prevBtn.addEventListener('click', () => {
-    trackWrapper.scrollBy({ left: -318 * 1, behavior: 'smooth' });
-  });
-</script>
+ 
+
+
+
+
 <script>
     const whatsappBtn = document.getElementById('whatsapp-btn');
   const callBtn = document.getElementById('call-btn');
@@ -595,23 +865,9 @@
   opacity: 1; /* ensure full opacity */
 }
 
-.moments-carousel-section {
-  padding: 60px 100px;
-  position: relative;
-  background-color: white;
-  overflow: hidden;
-}
 
-.carousel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.main-title-image {
-  width: 280px;
-  height: auto;
-}
+
 
 .carousel-controls {
   display: flex;
@@ -675,9 +931,7 @@
   margin-top: 1px;
 }
 @media (max-width: 768px) {
-  .moments-carousel-section {
-    padding: 40px 16px;
-  }
+  
    .carousel-controls {
     width: 100%;
     justify-content: flex-end;
@@ -687,11 +941,12 @@
   .carousel-header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 20px 20px;
     gap: 16px;
   }
 
   .main-title-image {
-    width: 200px;
+    width: 40%;
   }
 
   .carousel-track-wrapper {
@@ -733,11 +988,9 @@
 }
 
 </style>
-
-
-<section class="event-moments">
-    <img src="assets/flower2.svg" class="flower-left-decor" alt="Decorative Flower" />
-  <img src="assets/wheredream.svg" alt="Where Dreams Begin" class="dreams-title" />
+<section class="wedding-event-gallery">
+  <img src="assets/flower2.svg" class="flower-left-decor" alt="Decorative Flower" />
+  <img src="assets/venues.svg" alt="Where Dreams Begin" class="dreams-title" />
 
   <div class="dropdown-row">
     <div class="dropdown-wrapper">
@@ -761,73 +1014,278 @@
     </div>
   </div>
 
-
-
-  <div class="event-grid">
-    <!-- Reusing layout structure from event-moments -->
-    <div class="event-row">
-      <div class="event-card-new">
-        <img src="assets/rectangle1.svg" alt="Venue Image" />
-        <h3>Lorem ipsum dolor</h3>
-        <p>Lorem ipsum dolor sit amet consectetur. Purus amet id diam sed mi curabitur nec dui...</p>
-        <a href="#" class="more-link">More <span>→</span></a>
-      </div>
-
-      <div class="event-card-new">
-        <img src="assets/rectangle2.svg" alt="Venue Image" />
-        <h3>Lorem ipsum dolor</h3>
-        <p>Lorem ipsum dolor sit amet consectetur. Purus amet id diam sed mi curabitur nec dui...</p>
-        <a href="#" class="more-link">More <span>→</span></a>
-      </div>
-
-      <div class="event-card-new">
-        <img src="assets/rectangle3.svg" alt="Venue Image" />
-        <h3>Lorem ipsum dolor</h3>
-        <p>Lorem ipsum dolor sit amet consectetur. Purus amet id diam sed mi curabitur nec dui...</p>
-        <a href="#" class="more-link">More <span>→</span></a>
-      </div>
-
-      <div class="event-card-new">
-        <img src="assets/rectangle4.svg" alt="Venue Image" />
-        <h3>Lorem ipsum dolor</h3>
-        <p>Lorem ipsum dolor sit amet consectetur. Purus amet id diam sed mi curabitur nec dui...</p>
-        <a href="#" class="more-link">More <span>→</span></a>
-      </div>
+  <div class="wedding-card-grid">
+    <div class="wedding-card-item">
+      <img src="assets/rectangle1.svg" alt="Venue Image" />
+      <!-- <h3>Lorem ipsum dolor</h3> -->
+    </div>
+    <div class="wedding-card-item">
+      <img src="assets/rectangle2.svg" alt="Venue Image" />
+      <!-- <h3>Lorem ipsum dolor</h3> -->
+    </div>
+    <div class="wedding-card-item">
+      <img src="assets/rectangle3.svg" alt="Venue Image" />
+      <!-- <h3>Lorem ipsum dolor</h3> -->
+    </div>
+    <div class="wedding-card-item">
+      <img src="assets/rectangle4.svg" alt="Venue Image" />
+      <!-- <h3>Lorem ipsum dolor</h3> -->
+    </div>
+    <div class="wedding-card-item">
+      <img src="assets/rectangle2.svg" alt="Venue Image" />
+      <!-- <h3>Lorem ipsum dolor</h3> -->
+    </div>
+    <div class="wedding-card-item">
+      <img src="assets/rectangle3.svg" alt="Venue Image" />
+      <!-- <h3>Lorem ipsum dolor</h3> -->
     </div>
   </div>
 </section>
 
 
+
+  </div>
+
+
+
+ <style>
+  /* ---- General Wrapper ---- */
+.wedding-event-gallery {
+  position: relative;
+  padding: 60px 100px;
+  background-color: #fff;
+  font-family: 'Playfair Display', serif;
+  color: #342d28;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* ---- Dropdown Styling ---- */
+.dropdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+  max-width: 100%;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  width: 320px;
+  border-bottom: 1px solid #af9146;
+}
+
+.styled-city-dropdown {
+  width: 100%;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  background-color: transparent;
+  color: #d7c6a3;
+  border: none;
+  padding: 10px 0;
+  appearance: none;
+  outline: none;
+}
+
+.styled-city-dropdown option:disabled {
+  color: #d7c6a3;
+}
+
+.custom-dropdown-arrow {
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* ---- Decorative Flower ---- */
+.flower-left-decor {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  transform: translateY(100%);
+  width: 200px;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---- Image Grid ---- */
+.wedding-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+/* ---- Individual Cards ---- */
+.wedding-card-item {
+  width: 100%;
+  overflow: visible;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wedding-card-item img {
+  width: 100%;
+  height: 248px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.wedding-card-item h3 {
+  font-size: 25px;
+  font-family: sans-serif;
+  margin-top: 10px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+@media (max-width: 480px) {
+  .swiper {
+    max-width: 650px;  /* smaller width for mobile */
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+  }
+}
+/* ---- Responsive (for smaller screens) ---- */
+@media (max-width: 1024px) {
+  .wedding-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-row {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .wedding-card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+    border-radius: 0px;
+  }
+
+  .wedding-event-gallery {
+    padding: 30px 26px;
+    border-radius: 0px;
+  }
+
+  .wedding-card-item img {
+    height: 100px; /* Let image height adapt */
+    aspect-ratio: 3 / 4; /* Maintain consistent card shape */
+    border-radius: 0px;
+  }
+
+  .wedding-card-item h3 {
+    font-size: 1rem;
+  }
+}
+
+
+
+    </style>
+<script>
+  const weddingGalleryImages = [
+    { src: "assets/We_Celebrate_2.jpeg", title: "ROYAL PALACE WEDDINGS", caption: "Some description about the wedding theme shown above." },
+    { src: "assets/We_Celebrate_3.jpg", title: "BEACH WEDDINGS", caption: "A sunny celebration with waves and sand all around." },
+    { src: "assets/We_Celebrate_4.jpg", title: "MOUNTAIN VOWS", caption: "Serene mountain backdrops for your special day." },
+    { src: "assets/We_Celebrate_5.jpeg", title: "CITY CELEBRATIONS", caption: "Weddings in iconic city locations." },
+    { src: "assets/We_Celebrate_6.jpg", title: "DESERT DREAMS", caption: "Golden sands and traditional vibes." },
+    { src: "assets/We_Celebrate_7.jpg", title: "GARDEN BLOOM", caption: "Nature-inspired floral wedding setup." }
+  ];
+
+  let currentWeddingIndex = 0;
+
+  const weddingImageEl = document.getElementById("wedding-carousel-image");
+  const weddingTitleEl = document.getElementById("wedding-carousel-title");
+  const weddingCaptionEl = document.getElementById("wedding-carousel-caption");
+
+  const weddingPrevPreview = document.getElementById("wedding-prev-preview");
+  const weddingNextPreview = document.getElementById("wedding-next-preview");
+
+  function showWeddingSlide(index) {
+    const { src, title, caption } = weddingGalleryImages[index];
+
+    const prevIndex = (index - 1 + weddingGalleryImages.length) % weddingGalleryImages.length;
+    const nextIndex = (index + 1) % weddingGalleryImages.length;
+
+    weddingImageEl.classList.remove("active");
+
+    setTimeout(() => {
+      weddingImageEl.src = src;
+      weddingTitleEl.textContent = title;
+      weddingCaptionEl.textContent = caption;
+      weddingImageEl.classList.add("active");
+
+      // Update preview thumbnails
+      if (weddingPrevPreview && weddingNextPreview) {
+        weddingPrevPreview.src = weddingGalleryImages[prevIndex].src;
+        weddingNextPreview.src = weddingGalleryImages[nextIndex].src;
+      }
+    }, 200);
+  }
+
+  function nextWeddingSlide() {
+    currentWeddingIndex = (currentWeddingIndex + 1) % weddingGalleryImages.length;
+    showWeddingSlide(currentWeddingIndex);
+  }
+
+  function prevWeddingSlide() {
+    currentWeddingIndex = (currentWeddingIndex - 1 + weddingGalleryImages.length) % weddingGalleryImages.length;
+    showWeddingSlide(currentWeddingIndex);
+  }
+
+  // Auto-slide every 5 seconds
+  setInterval(nextWeddingSlide, 5000);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showWeddingSlide(currentWeddingIndex);
+    weddingImageEl.classList.add("active");
+  });
+</script>
+
+
 <section class="celebrate-section">
   <div class="celebrate-row">
     <div class="celebrate-left">
-  <img src="assets/wecreate.png" alt="We Create" class="wecreate-image" />
+  <img src="assets/yourdreams2.svg" alt="We Create" class="wecreate-image" />
   <img src="assets/design2.svg" alt="Design" class="celebrate-design" />
 
   <!-- Mobile-only replacement image -->
   <img src="assets/tree.svg" alt="Tree" class="mobile-tree" />
 </div>
 
-    <p class="celebrate-text">
+    <!-- <p class="celebrate-text">
       We handle the details,<br>you make the memories.
-    </p>
+    </p> -->
   </div>
 
   <!-- New Image Grid Below -->
   <div class="event-grid">
   <div class="event-row">
     <div class="event-card-new2">
-      <img src="assets/imagegrid1.svg" alt="Image 1" />
+      <img src="assets/gourmet_menu.jpg" alt="Image 1" />
       <h3>Gourmet Menus</h3>
     </div>
 
     <div class="event-card-new2">
-      <img src="assets/imagegrid1.svg" alt="Image 2" />
+      <img src="assets/decor.jpg" alt="Image 2" />
       <h3>Décor</h3>
     </div>
 
     <div class="event-card-new2">
-      <img src="assets/a1.svg" alt="Image 3" />
+      <img src="assets/makeup_1.jpg" alt="Image 3" />
       <h3>Beauty Rituals</h3>
     </div>
 
@@ -859,7 +1317,7 @@
 
   <div class="testimonial-container">
     <div class="testimonial-image">
-      <img src="assets/wedding.svg" alt="Wedding Couple">
+      <img src="assets/wedding.JPG" alt="Wedding Couple">
     </div>
     <div class="testimonial-content">
       <div class="royal-heading">
@@ -870,7 +1328,9 @@
         <div class="testimonial-text-content">
           <p class="testimonial-quote">
             <img src="assets/clip.png" alt="Clip" class="clip-overlay" />
-            Our wedding at Sayaji was nothing short of a royal fairytale. From the grand décor to impeccable service, every detail was curated with so much care. Our guests still talk about the lavish feast and the beautiful venue. Thank you for making our dream wedding come true!
+            Our wedding at Sayaji was nothing short of a royal fairytale. From the grand décor to impeccable service, every
+             detail was curated with so much care. Our guests still talk about the lavish feast and the beautiful venue. Thank you 
+             for making our dream wedding come true!
           </p>
           <p class="testimonial-author">- Priya & Rohan</p>
         </div>
@@ -879,14 +1339,14 @@
   </div>
 
   <!-- ✅ Move THIS inside the section, here -->
-  <div class="testimonial-nav-buttons">
+  <!-- <div class="testimonial-nav-buttons">
     <button class="nav-btn">
       <img src="assets/arrow-left.svg" alt="Previous">
     </button>
     <button class="nav-btn">
       <img src="assets/arrow-right.svg" alt="Next">
     </button>
-  </div>
+  </div> -->
 </section>
 <section class="form-section">
   <div class="form-container">
@@ -1011,10 +1471,17 @@
         <p>Sayaji Indore, H/1 , Scheme No.54, Vijay Nagar, Indore, Madhya Pradesh - 452010</p>
         <a href="mailto:enquiry@sayajigroup.com">enquiry@sayajigroup.com</a>
         <div class="social-icons">
-          <img src="assets/linkedin.svg" alt="LinkedIn" />
-          <img src="assets/Facebook.svg" alt="Facebook" />
-          <img src="assets/instagram.svg" alt="Instagram" />
-        </div>
+  <a href="https://www.linkedin.com/company/sayajihotelsltd/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/linkedin.svg" alt="LinkedIn" />
+  </a>
+  <a href="https://www.facebook.com/SayajiHotelsLtd/events/?paipv=0&eav=AfbEu1QjiYoV3GYpGcNboQ96hpfoqwSQbU37qi0hTbR9OKgrJiYfNBqiLi2-SAJ3jLA&_rdr" target="_blank" rel="noopener noreferrer">
+    <img src="assets/Facebook.svg" alt="Facebook" />
+  </a>
+  <a href="https://www.instagram.com/sayajiltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+    <img src="assets/instagram.svg" alt="Instagram" />
+  </a>
+</div>
+
       </div>
     </div>
 
@@ -1046,7 +1513,12 @@
     font-size: 14px !important;
     padding: 8px !important;
     gap: 8px !important;
-    margin-right: -20px;
+    border-radius: 8px !important;
+   
+  }
+  .phone-icon{
+    width: 18px !important;
+    height: 18px !important;
   }
 }
   .enquiry-button-new {
@@ -1195,10 +1667,7 @@
 
 
 
-.form-checkbox a {
-  color: #000; /* Make the link black */
-  text-decoration: underline;
-}
+
 
 
 .book-button {
@@ -1323,19 +1792,6 @@
     gap: 32px;
     align-items: center;
   }
-.form-checkbox {
-  display: flex;
-  
-  align-items: center;
-  gap: 8px; /* space between checkbox and text */
-  flex-wrap: wrap; /* optional: allow wrap on small screens */
-  font-size: 14px; /* optional: adjust size for responsiveness */
-}
-
-.form-checkbox a {
-  color: #000;
-  text-decoration: underline;
-}
 
   .form-logo {
     width: 80%;
@@ -1411,6 +1867,7 @@
     height: 56px;
     font-size: 18px;
     padding: 12px;
+    border-radius: 8px;
     margin: 0 auto; /* Keep it centered */
   }
   .form-footer {
@@ -1454,8 +1911,8 @@
 }
 
 .nav-btn img {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
 
 .enquiry-wrapper {
@@ -1481,7 +1938,7 @@
 
 .enquiry-button {
   position: relative;
-  font-family: 'Source Sans Pro', sans-serif;
+ font-family: 'Work Sans', sans-serif; 
   font-size: 25px;
   width: 244px;
   height: 72px;
@@ -1493,6 +1950,7 @@
   border-radius: 0;
   z-index: 1;
   display: flex;
+  border-radius: 8px;
   align-items: center;
   justify-content: center;
   gap: 16px;
@@ -1549,19 +2007,31 @@
 }
 .testimonial-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 60px;
-  max-width: 2228px;
+  align-items: center; /* vertically align center */
+  gap: 80px; /* more space between image and box */
+  max-width: 1600px;
   margin: 0 auto;
+}
+.testimonial-image {
+  width: 100%;
+  max-width: 500px; /* ⬅️ make it wider */
+  flex-shrink: 0;
 }
 
 .testimonial-image img {
-  width: auto;
-  height: auto;
-  max-height: none;
-  max-width: none;
+  /* width: 100%;
+  height: 780px; 
+  object-fit: cover; 
   display: block;
+  border-radius: 4px; */
+
+    width: 120%;
+    height: 680px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    margin-top: -15rem;
+
 }
 
 .testimonial-content {
@@ -1582,23 +2052,23 @@
   height: 100%;
   object-fit: contain;
   display: block;
+      margin-left: 5rem;
 }
-
 .testimonial-box {
+  position: relative;
   background-color: #fcf5eb;
   border: 2px solid #af9146;
-  padding: 30px;
-  position: relative;
-  height: 531px; /* ← set fixed height */
-  max-width: 800px; /* reduced width */
-  margin-left: -80px; /* shift left */
-  margin-top: 40px; /* push down */
+  padding: 20px;
+  padding-left: 20px;
+  height: 531px;
+  max-width: 700px;
+  margin-left: -80px;
+  margin-top: 120px;
   box-sizing: border-box;
   display: flex;
-   align-items: center;
+  align-items: center;
   justify-content: center;
 }
-
 
 .testimonial-quote {
   font-family: 'Source Sans Pro', sans-serif;
@@ -1631,15 +2101,14 @@
   margin-top: 20px;
 }
 
-.testimonial-nav button {
-  padding: 8px 12px;
-  background-color: #fff;
-  border: 1px solid #af9146;
-  color: #af9146;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.testimonial-nav-buttons {
+  position: absolute;
+  bottom: 20px; /* closer to bottom inside the box */
+  right: 100px;  /* align right inside the box */
+  display: flex;
+  gap: 12px;
+  z-index: 5;
 }
-
 .testimonial-nav button:hover {
   background-color: #af9146;
   color: #fff;
@@ -1656,10 +2125,6 @@
     /* flex-direction: column; */
     gap: 16px;
   }
-  .phone-icon {
-  width: 16px;
-  height: 16px;
-}
 
   .testimonial-content {
     width: 100%;
@@ -1675,11 +2140,11 @@
   }
 
   .royal-heading img {
-    width: 130%;
+    width: 140%;
     height: auto;
     object-fit: contain;
     display: block;
-     margin-left: -30px;
+     margin-left: -40px;
   }
 
   .testimonial-image {
@@ -1688,10 +2153,11 @@
   }
 
   .testimonial-image img {
-    width: 110%;
+    width: 150%;
     height: auto;
     object-fit: cover;
     display: block;
+    margin-top: -20px;
   }
 .testimonial-box {
     width: 170%;
@@ -1699,8 +2165,8 @@
     background-color: #fcf5eb;
     border: 2px solid #af9146;
    padding: 20px;
-    margin-top: 20px;
-    margin-right: 60px;
+    /* margin-top: 20px;
+    margin-right: 60px; */
     order: 2; /* ✅ Pushes it to bottom */
   }
 
@@ -1745,15 +2211,9 @@
     transition: all 0.3s ease;
   }
 
- .nav-btn:hover {
-  background-color: #af9146;
-}
-
-/* Make icon white on hover */
-.nav-btn:hover img {
-  filter: brightness(0) invert(1); /* turns icon white */
-}
-
+  .nav-btn:hover {
+    background-color: #af9146;
+  }
 
   .nav-btn img {
     width: 16px;
@@ -1766,46 +2226,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
-  .testimonial-container {
-    flex-direction: row;
-    align-items: center;
-    text-align: center; /* optional */
-  }
 
-  .testimonial-image,
-  .testimonial-content {
-    width: 100%;
-    max-width: 700px; /* or whatever fits best */
-    padding-right:30px;
-    margin-left: -60px;
-  }
-.royal-heading img{
-   width: 80%;
-   margin-left: 70px;
-}
-  .testimonial-image img {
-    width: 100%;
-    height: auto;
-  }
-  .testimonial-box {
-  position: relative;
-}.testimonial-nav-buttons {
-  position: absolute;
-  bottom: 40px;
-  right: 0; /* aligns to the right edge of .testimonial-box */
-  display: flex;
-  gap: 12px;
-  z-index: 5;
-}
-.celebrate-text{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
-    line-height: 1.3;
-    color: #342d28;
-    max-width: 280px;
-}
-}
 
 </style>
 <style>
@@ -1832,32 +2253,34 @@
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 32px;
+  
   color: #fff;
   margin: 0;
-}
-/* ✅ Responsive styling for tablet and mobile */
-@media (max-width: 768px) {
+}@media (max-width: 768px) {
   .offer-banner {
     height: 61px;
-    padding: 0 5px; /* match left: 16px */
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ✅ Center horizontally */
   }
 
   .offer-content {
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; */
-    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* ✅ Center horizontally */
+    align-items: center;     /* ✅ Center vertically */
+    text-align: center;      /* ✅ Center text alignment */
   }
 
   .offer-text {
-    width: 263px;
-    height: 53px;
-    font-size: 13px; /* scaled to fit 42px height */
-    
-    overflow: hidden;
-
-    /* text-overflow: ellipsis;
-    white-space: nowrap; */
+    width: auto; /* Let text size adjust naturally */
+    height: auto;
+    font-size: 13px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
   }
 }
 </style>
@@ -1932,7 +2355,7 @@
   height: 25px;
   width: 450px;
   flex-shrink: 0;
-  margin-top: 20px; /* visually aligns with wecreate.png */
+ margin-top: 70px; /* visually aligns with wecreate.png */
 }
 
 .celebrate-text {
@@ -1946,11 +2369,9 @@
   .celebrate-section {
     padding: 0px 0px;
   }
-  .flower-left-decor {
-    display: none;
-  }
+
   .celebrate-row {
-    padding: 0px 20px 10px 20px;
+    padding: 10px;
     align-items: flex-start;
     gap: 30px;
   }
@@ -1964,7 +2385,7 @@
   .wecreate-image {
     width: 100%;
     height: auto;
-    margin-top: 0;
+    margin-top: -100px
   }
 
   .celebrate-design {
@@ -2005,11 +2426,13 @@
   height: auto;
   margin-bottom: 40px;
   display: block;
-}@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
 
 .dropdown-wrapper {
   position: relative;
-  width: 290px;
+  width: 320px;
   border-bottom: 1px solid #af9146;
   /* padding-bottom: 8px; */
 }
@@ -2028,12 +2451,12 @@
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-style: normal;
-  line-height: 100%;
+  line-height: 1.2;
   letter-spacing: 0%;
   color: #d7c6a3;
   border: none;
   background-color: transparent;
-  padding: 10px 0;
+  padding: 12px 10px;
   appearance: none;
   outline: none;
 }
@@ -2146,30 +2569,25 @@
   .dreams-section {
     padding: 40px 20px;
   }
-  
     .more-link {
     font-size: 16px;
     margin-top: 20px;
   }
-.dropdown-wrapper {
-  position: relative;
-  width: clamp(200px, 60vw, 290px); /* Min 200px, max 290px */
-  border-bottom: 1px solid #af9146;
-}
+
   .more-link span {
     margin-left: 2px;
   }
 
      
   .event-card-new p {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: sans-serif;
     text-align: left;
   }
 
   .event-card-new h3 {
     font-size: 14px !important;
     line-height: 1.3;
-      font-family: "Source Sans Pro", sans-serif;
+      font-family: sans-serif;
     text-align: left;
     margin-bottom: 8px;
   }
@@ -2182,7 +2600,7 @@
  
     justify-content: flex-start;
     gap: 16px;
-    padding: 0px 20px 0px 20px;
+    /* padding: 0px 20px 0px 20px; */
   }
 
   .dropdown-row select {
@@ -2190,13 +2608,15 @@
     height: 40px;
     font-size: 14px;
   }
-  .dreams-title {
-    margin-left: 0;
-    margin-right: auto;
-    display: block;
-    width: 60%; /* optional for better scaling */
-    padding: 0px 20px 0px 20px;
-  }
+
+    .dreams-title {
+        margin-left: 0;
+        margin-right: auto;
+        display: block;
+        width: 40%;
+        padding-top: 20px ;
+    }
+
   .dreams-grid {
     flex-direction: column;
     align-items: center;
@@ -2275,7 +2695,7 @@
 }
 .event-card-new h3{
   font-size: 25px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: sans-serif;
   padding-top: 10px;
    padding-bottom: 10px;
 }

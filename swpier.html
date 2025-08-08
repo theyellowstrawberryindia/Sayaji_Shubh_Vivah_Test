@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+    <section class="coverflow-carousel">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="assets/1.jpg" alt="Image 1"></div>
+      <div class="swiper-slide"><img src="assets/2.jpg" alt="Image 2"></div>
+      <div class="swiper-slide"><img src="assets/3.jpg" alt="Image 3"></div>
+        <div class="swiper-slide"><img src="assets/4.jpg" alt="Image 2"></div>
+      <div class="swiper-slide"><img src="assets/5.jpg" alt="Image 3"></div>
+        <div class="swiper-slide"><img src="assets/2.jpg" alt="Image 2"></div>
+      <div class="swiper-slide"><img src="assets/3.jpg" alt="Image 3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+<style>
+    .coverflow-carousel {
+
+  padding: 50px 0;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: auto;
+}
+
+
+.swiper-slide {
+  width: 600px;      /* bigger width */
+  height: 475px;     /* bigger height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1300px; /* increased from 1000px */
+  margin: auto;
+}
+
+.swiper-slide {
+  width: 500px;     /* increased width */
+  height: 400px;    /* increased height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25); /* stronger shadow for bigger size */
+}
+</style>
+<script>
+const swiper = new Swiper('.swiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 3,
+  loop: true,
+  autoplay: {
+    delay: 4000,   // 4 seconds
+    disableOnInteraction: false,  // keep autoplay running after user interaction
+  },
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Legacy Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600&family=Work+Sans:wght@300;400;500;600;700&family=Luxurious+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="legacy-section">
+  <div class="legacy-container">
+    <div class="legacy-left">
+      <div class="fulltext-heading">
+        <img src="assets/fullgroup.svg" alt="Shubh Vivah Full Text">
+      </div>
+      <p class="legacy-subtext">Share your details, and our wedding expert will connect with you shortly.</p>
+      <form class="legacy-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <label class="checkbox-label">
+          <input type="checkbox"> I agree to <a href="#">Terms & Conditions</a>.
+        </label>
+        <button type="submit" class="legacy-button">
+          <img src="assets/phone.svg" alt="Phone Icon">
+          <span>Get In Touch</span>
+        </button>
+      </form>
+    </div>
+    <div class="legacy-right">
+      <img src="assets/hands.png" alt="Legacy Image" class="legacy-img">
+    </div>
+    <div class="stats-bar-overlay">
+      <div class="stat"><strong>22</strong><span>Cities</span></div>
+      <div class="stat"><strong>30</strong><span>Hotel</span></div>
+      <div class="stat"><strong>124+</strong><span>Banquets</span></div>
+      <div class="stat"><strong>5000+</strong><span>Events Planned</span></div>
+      <div class="stat"><strong>2012</strong><span>Keys</span></div>
+    </div>
+  </div>
+</section>
+<style>
+/* Reset and /* Base styles */
+.legacy-section {
+  font-family: 'Playfair Display', serif;
+  color: #3b2f2b;
+  background: #fff;
+}
+
+.legacy-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.legacy-left {
+  flex: 1;
+  max-width: 50%;
+  padding: clamp(30px, 5vw, 30px) clamp(20px, 5vw, 60px);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.fulltext-heading {
+  width: 397px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.fulltext-heading img {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+.legacy-subtext {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 3vw, 16px);
+  line-height: 1.4;
+  color: #342d28;
+  margin: 16px 0 24px;
+}
+
+.legacy-form {
+  width: 100%;
+  max-width: clamp(300px, 80vw, 600px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.legacy-form input[type="text"],
+.legacy-form input[type="email"],
+.legacy-form input[type="tel"] {
+  width: 100%;
+  padding: clamp(12px, 3vw, 18px) clamp(10px, 2vw, 14px);
+  font-size: clamp(14px, 3vw, 16px);
+  background-color: #e6dcc5;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #342d28;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.legacy-form input::placeholder {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #af9146;
+  font-weight: 500;
+  font-size: clamp(14px, 3vw, 20px);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: clamp(12px, 2.5vw, 14px);
+  font-family: 'Work Sans', sans-serif;
+  color: #000000;
+  gap: 6px;
+}
+
+.checkbox-label a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.legacy-button {
+  position: relative;
+  width: clamp(150px, 50%, 300px);
+  padding: clamp(12px, 3vw, 20px);
+  background: #af9146;
+  color: #ddd9d0;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(16px, 3vw, 26px);
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.legacy-button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.legacy-button:hover {
+  opacity: 0.9;
+}
+
+.legacy-right {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+}
+
+.legacy-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stats-bar-overlay {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: rgba(253, 247, 241, 1);
+  min-height: clamp(100px, 20vh, 200px);
+  z-index: 3;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stats-bar-overlay .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  flex: 1;
+  padding: clamp(20px, 5vh, 60px) 0;
+  min-width: 100px;
+  height: 100%;
+  color: #342d28;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.stats-bar-overlay .stat:hover {
+  background-color: #af9146;
+  color: #fff;
+}
+
+.stats-bar-overlay .stat:hover strong,
+.stats-bar-overlay .stat:hover span {
+  color: #fff;
+}
+
+.stats-bar-overlay .stat strong {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(30px, 6vw, 68px);
+  line-height: 100%;
+}
+
+.stats-bar-overlay .stat span {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(20px, 4vw, 30px);
+  line-height: 100%;
+  color: #342d28;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .legacy-container {
+    flex-direction: column;
+  }
+
+  .legacy-left,
+  .legacy-right {
+    max-width: 100%;
+  }
+
+  .legacy-left {
+    padding: 20px;
+  }
+
+  .fulltext-heading {
+    width: 100%;
+    text-align: left;
+  }
+
+  .fulltext-heading img {
+    width: 60%;
+    margin: 0px;
+  }
+
+  .legacy-form {
+    max-width: 100%;
+    margin-left:-5px;
+  }
+
+  .legacy-button {
+    width: 100%;
+    max-width: 300px;
+    /* margin: 20px auto 40px; */
+  }
+
+  .stats-bar-overlay {
+    margin-top: -20px;
+    position: relative;
+    transform: none;
+    left: 0;
+    width: 100%;
+  }
+
+  .stats-bar-overlay .stat {
+    /* min-width: 80px; */
+    padding: 20px 0;
+  }
+
+  .stats-bar-overlay .stat strong {
+    font-size: clamp(24px, 5vw, 40px);
+  }
+
+  .stats-bar-overlay .stat span {
+    font-size: clamp(16px, 3vw, 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-bar-overlay .stat {
+    /* flex: 1 1 50%; */
+    padding: 15px 0;
+  }
+
+  .legacy-subtext {
+    text-align: left;
+  }
+}</style>
+
+</body>
+</html>
