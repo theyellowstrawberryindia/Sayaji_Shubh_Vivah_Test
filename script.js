@@ -1,3 +1,5 @@
+>
+  // WhatsApp and Call button toggle
   const whatsappBtn = document.getElementById('whatsapp-btn');
   const callBtn = document.getElementById('call-btn');
 
@@ -18,7 +20,8 @@
     showWhatsApp = !showWhatsApp;
   }, 5000); // 5 seconds toggle
 
-   const track = document.querySelector('.carousel-track');
+  // Carousel buttons scroll functionality
+  const track = document.querySelector('.carousel-track');
   const nextBtn = document.querySelector('.next-btn');
   const prevBtn = document.querySelector('.prev-btn');
 
@@ -29,3 +32,4 @@
   prevBtn.addEventListener('click', () => {
     track.scrollBy({ left: -320, behavior: 'smooth' });
   });
+
