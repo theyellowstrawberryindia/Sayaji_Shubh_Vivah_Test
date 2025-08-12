@@ -1009,7 +1009,7 @@ width: 397px;
 
 
 .carousel-header {
-  padding: 60px 100px;
+  padding: 40px 100px;
 }
 
 
@@ -1133,7 +1133,7 @@ width: 397px;
  /* ---- General Wrapper ---- */
 .wedding-event-gallery {
   position: relative;
-  padding: 60px 100px;
+  padding: 40px 100px;
   background-color: #fff;
   font-family: 'Playfair Display', serif;
   color: #342d28;
@@ -2548,7 +2548,7 @@ width: 397px;
   .wedding-card-item img {
     height: 100px; /* Let image height adapt */
     aspect-ratio: 3 / 4; /* Maintain consistent card shape */
-    border-radius: 0px;
+    border-radius: 4px;
   }
 
   .wedding-card-item h3 {
@@ -2609,4 +2609,56 @@ width: 397px;
 .form-checkbox label a {
   color: #000;
   text-decoration: underline;
+}
+
+
+ .wedding-card-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.wedding-card-item h3 {
+  margin: 10px 0 5px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #af9146;
+  text-align: center;
+}
+
+/* Hide description initially */
+.card-description {
+  position: absolute;
+  bottom: 40px;
+  /* left: 10px;
+  right: 10px; */
+  background: rgba(0, 0, 0, 0.5); /* lighter black bg */
+  color: rgba(255, 255, 255, 1); /* full opaque white text */
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  padding: 8px 10px;
+  opacity: 0;              /* hidden by default */
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.wedding-card-item:hover .card-description {
+  opacity: 1;              /* fully visible on hover */
+  pointer-events: auto;
+}
+
+@media (max-width: 480px) {
+  .wedding-card-item h3 {
+    font-size: 1rem; /* Smaller title */
+  }
+  .card-description {
+    font-size: 0.65rem; /* Smaller text for mobile */
+    bottom: 30px;       /* Slightly closer to bottom */
+    padding: 4px 6px;   /* Less padding */
+    left: 4px;
+    right: 4px;
+    border-radius: 3px; /* Slightly smaller corners */
+  }
 }

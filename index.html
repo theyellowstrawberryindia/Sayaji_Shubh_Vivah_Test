@@ -125,58 +125,61 @@
   <img src="assets/wheredreambeginsnew.svg" alt="Where Dreams Begin" class="dreams-title" />
 
   <div class="dropdown-row">
-    <div class="dropdown-wrapper">
-      <select class="styled-city-dropdown">
-        <option disabled selected>Select City</option>
-        <option>Jaipur</option>
-        <option>Udaipur</option>
-        <option>Goa</option>
-      </select>
-      <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
-    </div>
-
-    <div class="dropdown-wrapper">
-      <select class="styled-city-dropdown">
-        <option disabled selected>Select Wedding Type</option>
-        <option>Destination</option>
-        <option>Traditional</option>
-        <option>Beach</option>
-      </select>
-      <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
-    </div>
+  <div class="dropdown-wrapper">
+    <!-- Correct single select -->
+    <select id="cityFilter" class="styled-city-dropdown">
+      <option value="" selected>Select City</option>
+      <option value="indore">Indore</option>
+      <option value="udaipur">Udaipur</option>
+      <option value="kolhapur">Kolhapur</option>
+      <option value="pune">Pune</option>
+      <option value="raipur">Raipur</option>
+      <option value="vadodra">Vadodra</option>
+    </select>
+    <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
   </div>
+</div>
 
-  <div class="wedding-card-grid">
-    <div class="wedding-card-item">
-      <img src="assets/rectangle1.svg" alt="Venue Image" />
-      <!-- <h3>Lorem ipsum dolor</h3> -->
-    </div>
-    <div class="wedding-card-item">
-      <img src="assets/rectangle2.svg" alt="Venue Image" />
-      <!-- <h3>Lorem ipsum dolor</h3> -->
-    </div>
-    <div class="wedding-card-item">
-      <img src="assets/rectangle3.svg" alt="Venue Image" />
-      <!-- <h3>Lorem ipsum dolor</h3> -->
-    </div>
-    <div class="wedding-card-item">
-      <img src="assets/rectangle4.svg" alt="Venue Image" />
-      <!-- <h3>Lorem ipsum dolor</h3> -->
-    </div>
-    <div class="wedding-card-item">
-      <img src="assets/rectangle2.svg" alt="Venue Image" />
-      <!-- <h3>Lorem ipsum dolor</h3> -->
-    </div>
-    <div class="wedding-card-item">
-      <img src="assets/rectangle3.svg" alt="Venue Image" />
-      <!-- <h3>Lorem ipsum dolor</h3> -->
-    </div>
+
+ <div class="wedding-card-grid">
+  <div class="wedding-card-item" data-city="indore" data-type="traditional">
+    <img src="assets/Sayaji_Indore_Compressed.jpg" alt="Venue Image" />
+    <h3>Sayaji Indore</h3>
+    <p class="card-description">Sayaji Indore offers 16 elegant banquets for 15–1250 guests, perfect for grand to intimate weddings.</p>
   </div>
+  <div class="wedding-card-item" data-city="kolhapur" data-type="traditional">
+    <img src="assets/Sayaji_Kolhapur_Compressed.jpg" alt="Venue Image" />
+    <h3>Sayaji Kolhapur</h3>
+    <p class="card-description">Host intimate to grand weddings in Sayaji Kolhapur’s 8 elegant banquets.</p>
+  </div>
+  <div class="wedding-card-item" data-city="pune" data-type="traditional">
+    <img src="assets/Sayaji_Pune_Compressed.jpg" alt="Venue Image" />
+    <h3>Sayaji Pune</h3>
+    <p class="card-description"> From small gatherings to grand galas, Sayaji Pune’s 5 banquets host 7–3000 guests.
+
+</p>
+  </div>
+  <div class="wedding-card-item" data-city="raipur" data-type="traditional">
+    <img src="assets/Sayaji_Raipur_Compressed.jpg" alt="Venue Image" />
+    <h3>Sayaji Raipur</h3>
+    <p class="card-description">From intimate vows to lavish feasts, Sayaji Raipur’s 5 banquets make weddings magical.
+</p>
+  </div>
+  <div class="wedding-card-item" data-city="udaipur" data-type="traditional">
+    <img src="assets/Sayaji_Udaipur_Compressed.jpg" alt="Venue Image" />
+    <h3>Sayaji Udaipur</h3>
+    <p class="card-description"> Celebrate in royal style at Udaipur’s Sayaji Resorts, with 4 opulent banquets for 15–1000 guests.
+</p>
+  </div>
+  <div class="wedding-card-item" data-city="vadodra" data-type="traditional">
+    <img src="assets/Sayaji_Vadodra_Compressed.jpg" alt="Venue Image" />
+    <h3>Sayaji Vadodra</h3>
+    <p class="card-description">  Celebrate love in Sayaji Vadodara’s 6 banquets, perfect for 12–450 guests.
+</p>
+  </div>
+</div>
+
 </section>
-
-
-
-  </div>
 
 
 

@@ -71,3 +71,34 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error(err);
     });
   });
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+  const citySelect = document.getElementById('cityFilter');
+  const cards = document.querySelectorAll('.wedding-card-item');
+
+  function filterCards() {
+    const selectedCity = citySelect.value.toLowerCase();
+
+    cards.forEach(card => {
+      const cardCity = card.getAttribute('data-city').toLowerCase();
+
+      const cityMatch = !selectedCity || cardCity === selectedCity;
+
+      if (cityMatch) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  citySelect.addEventListener('change', filterCards);
+
+  // Optional: show all on load
+  citySelect.value = '';
+  filterCards(); // show all initially
+});
