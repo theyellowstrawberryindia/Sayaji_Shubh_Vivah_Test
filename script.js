@@ -107,3 +107,15 @@ document.addEventListener('DOMContentLoaded', function () {
   citySelect.value = '';
   filterCards(); // show all initially
 });
+
+
+
+
+//for the terms and condition in section 2
+document.querySelector('form').addEventListener('submit', function(e) {
+  const checkbox = document.querySelector('input[name="agreed"]');
+  if (!checkbox.checked) {
+    e.preventDefault();
+    alert('You must agree to the Terms & Conditions before continuing.');
+  }
+});

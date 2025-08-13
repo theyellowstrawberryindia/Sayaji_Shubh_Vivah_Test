@@ -27,7 +27,7 @@
 
     </nav>
   <section class="hero">
-    <div class="overlay"></div>
+     <img src="assets/hero-image-updated.webp" alt="Hero" class="hero-img" />
 <div class="content">
   <img src="assets/hero_image_text.svg" alt="Hero Image Text" />
 </div>
@@ -56,7 +56,7 @@
   <input type="email" name="email" placeholder="Email" required>
   <input type="tel" name="phone" placeholder="Phone Number" required>
   <label class="checkbox-label">
-    <input type="checkbox" name="agreed" value="Yes" required> I agree to <a href="#">Terms & Conditions</a>.
+    <input type="checkbox" name="agreed" value="Yes" required> I agree to <a href="#" required>Terms & Conditions</a>.
   </label>
   <button type="submit" class="legacy-button">
     <!-- <img src="assets/phone.svg" alt="Phone Icon"> -->
@@ -387,34 +387,37 @@
   </div>
 
   <div class="input-wrapper">
-    <div class="dropdown-wrapper-new">
-      <select class="styled-city-dropdown">
-        <option disabled selected>Event Duration</option>
-        <option>1 Day</option>
-        <option>2 Days</option>
-        <option>3+ Days</option>
-      </select>
-      <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
-    </div>
+  <div class="dropdown-wrapper-new">
+    <input 
+      type="date" 
+      class="styled-city-dropdown" 
+      placeholder="Start Date" 
+      name="start-date" 
+      required
+    />
+
   </div>
 </div>
 
-
-
-        <div class="form-checkbox">
-          <input type="checkbox" id="terms" />
-          <label for="terms">I accept the <a href="#">Terms & Conditions</a>.</label>
-        </div>
-
-        <div class="enquiry-wrapper-new">
-  <!-- <img src="assets/hover_button_gold.png" alt="Button Decoration" class="enquiry-decor-new" /> -->
-<button class="enquiry-button-new" onclick="window.location.href='thankyou.html'">
-  <img src="assets/arrow-right-circle.png" alt="Phone Icon" class="phone-icon" />
-  Book Now
-</button>
-
 </div>
-      </div>
+
+
+
+   <form action="thankyou.html" method="get">
+  <div class="form-checkbox">
+    <input type="checkbox" id="terms" name="terms" required />
+    <label for="terms">I accept the <a href="#">Terms &amp; Conditions</a>.</label>
+  </div>
+
+  <div class="enquiry-wrapper-new">
+    <button type="submit" class="enquiry-button-new">
+      <img src="assets/arrow-right-circle.png" alt="Phone Icon" class="phone-icon" />
+      Book Now
+    </button>
+  </div>
+  
+</form>
+</div>
 
       <div class="form-right">
         <h3>Contact</h3>
