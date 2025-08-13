@@ -1,12 +1,17 @@
  const whatsappBtn = document.getElementById('whatsapp-btn');
-  const callBtn = document.getElementById('call-btn');
+  const callBtn = document.getElementById('call-btns');
 
   let showWhatsApp = true;
 
   // Initial state
   whatsappBtn.style.display = 'flex';
   callBtn.style.display = 'none';
-
+  document.getElementById('whatsapp-btn').onclick = function() {
+    window.location.href = 'tel:7314006666';
+  };
+  document.getElementById('call-btns').onclick = function() {
+    window.location.href = 'tel:7314006666';
+  };
   setInterval(() => {
     if (showWhatsApp) {
       whatsappBtn.style.display = 'none';

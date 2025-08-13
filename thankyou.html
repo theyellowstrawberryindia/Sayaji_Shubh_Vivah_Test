@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Font for Elegance -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <style>
+
+ 
+/* Unique Thank You Page Styling */
+.thankyou-page {
+  text-align: center;
+  margin-top: 120px;
+  padding: 0 20px;
+}
+
+.thankyou-title {
+  font-size: 2.5rem;
+  color: #b88a44;
+  margin-bottom: 20px;
+}
+
+.thankyou-message {
+  font-size: 1.2rem;
+  font-family: 'Work Sans', sans-serif; 
+  color: #333;
+  margin-bottom: 60px;
+}
+
+.thankyou-back-button {
+  display: inline-block;
+  background-color: #b88a44;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-family: 'Work Sans', sans-serif; 
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.thankyou-back-button:hover {
+  background-color: #a0773a;
+}
+
+.space-div{
+    padding-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 52px;
+        width: auto;
+    }
+}
+    .thankyou-container {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+ <nav class="navbar">
+      <div class="logo">
+        <img src="assets/Logo_White.png" alt="Shubh Vivah Logo">
+      </div>
+   <div class="start-planning">
+  <a href="#enquiry-form">
+    <!-- <img src="assets/calls.svg" alt="Call Icon" class="call-icon" /> -->
+    Enquire Now!
+  </a>
+</div>
+
+    </nav>
+ <main class="thankyou-page">
+  <h1 class="thankyou-title">Thank You!</h1>
+  <p class="thankyou-message">
+    Your form has been submitted successfully.  
+    Our team will get in touch with you shortly to discuss your dream event.
+  </p>
+  <a href="index.html" class="thankyou-back-button">Go Back</a>
+</main>
+<div class="space-div"></div>
+<div class="space-div"></div>
+<section id="enquiry-form" class="form-section">
+  <div class="form-container">
+    <img src="assets/Logo_black.png" alt="Shubh Vivah Logo" class="form-logo" />
+    
+    <div class="form-content">
+      <div class="form-left">
+        <p class="consultation-text">Get a Free 45-Minute Expert Consultation</p>
+        <h2 class="form-heading">
+          Help us curate a personalized experience by sharing a few more details.
+        </h2>
+
+     <div class="form-grid">
+  <!-- New Fields at the Top -->
+<div class="input-wrapper">
+  <div class="dropdown-wrapper-new">
+    <input type="text" class="styled-city-dropdown" placeholder="Your Name" />
+    <!-- No arrow image here -->
+  </div>
+</div>
+
+<div class="input-wrapper">
+  <div class="dropdown-wrapper-new">
+    <input type="tel" class="styled-city-dropdown" placeholder="Phone Number" />
+    <!-- No arrow image here -->
+  </div>
+</div>
+
+  <!-- Existing Dropdowns Below -->
+  <div class="input-wrapper">
+    <div class="dropdown-wrapper-new">
+      <select class="styled-city-dropdown">
+        <option disabled selected>Select Wedding Type</option>
+        <option>Destination</option>
+        <option>Traditional</option>
+        <!-- <option>Beach</option> -->
+      </select>
+      <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
+    </div>
+  </div>
+
+  <div class="input-wrapper">
+    <div class="dropdown-wrapper-new">
+      <select class="styled-city-dropdown">
+        <option disabled selected>Select City</option>
+        <option>Indore</option>
+        <option>Mumbai</option>
+        <option>Delhi</option>
+        <option>Others</option>
+      </select>
+      <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
+    </div>
+  </div>
+
+  <div class="input-wrapper">
+    <div class="dropdown-wrapper-new">
+      <select class="styled-city-dropdown">
+        <option disabled selected>Choose Venue</option>
+        <option>Sayaji Indore</option>
+        <option>Sayaji Pune</option>
+        <option>Sayaji Raipur</option>
+        <option>Sayaji Kolhapur</option>
+        <option>Sayaji Vadodra</option>
+        <option>Sayaji Udaipur</option>
+      </select>
+      <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
+    </div>
+  </div>
+
+  <div class="input-wrapper">
+    <div class="dropdown-wrapper-new">
+      <select class="styled-city-dropdown">
+        <option disabled selected>Select Occasion</option>
+        <option>Wedding</option>
+        <option>Reception</option>
+        <option>Engagement</option>
+      </select>
+      <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
+    </div>
+  </div>
+
+  <div class="input-wrapper">
+    <div class="dropdown-wrapper-new">
+      <select class="styled-city-dropdown">
+        <option disabled selected>Number of Guests</option>
+        <option>Below 100</option>
+        <option>100 - 300</option>
+        <option>300+</option>
+      </select>
+      <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
+    </div>
+  </div>
+
+  <div class="input-wrapper">
+    <div class="dropdown-wrapper-new">
+      <select class="styled-city-dropdown">
+        <option disabled selected>Event Duration</option>
+        <option>1 Day</option>
+        <option>2 Days</option>
+        <option>3+ Days</option>
+      </select>
+      <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
+    </div>
+  </div>
+</div>
+
+
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="terms" />
+          <label for="terms">I accept the <a href="#">Terms & Conditions</a>.</label>
+        </div>
+
+        <div class="enquiry-wrapper-new">
+  <!-- <img src="assets/hover_button_gold.png" alt="Button Decoration" class="enquiry-decor-new" /> -->
+  <button class="enquiry-button-new">
+    <img src="assets/arrow-right-circle.png" alt="Phone Icon" class="phone-icon" />
+    Book Now
+  </button>
+</div>
+      </div>
+
+      <div class="form-right">
+        <h3>Contact</h3>
+        <p>IND +91 731 4006666</p>
+        <p>Sayaji Indore, H/1 , Scheme No.54, Vijay Nagar, Indore, Madhya Pradesh - 452010</p>
+        <a href="mailto:enquiry@sayajigroup.com">enquiry@sayajigroup.com</a>
+        <div class="social-icons">
+  <a href="https://www.linkedin.com/company/sayajihotelsltd/" target="_blank" rel="noopener noreferrer">
+    <img src="assets/linkedin.svg" alt="LinkedIn" />
+  </a>
+  <a href="https://www.facebook.com/SayajiHotelsLtd/events/?paipv=0&eav=AfbEu1QjiYoV3GYpGcNboQ96hpfoqwSQbU37qi0hTbR9OKgrJiYfNBqiLi2-SAJ3jLA&_rdr" target="_blank" rel="noopener noreferrer">
+    <img src="assets/Facebook.svg" alt="Facebook" />
+  </a>
+  <a href="https://www.instagram.com/sayajiltd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+    <img src="assets/instagram.svg" alt="Instagram" />
+  </a>
+</div>
+
+      </div>
+    </div>
+
+   <div class="form-footer">
+    <div class="divider">
+    <img src="assets/design4.svg" alt="Divider" />
+  </div>
+  <div class="footer-row">
+    
+    <span class="copyright">© 2025 Sayaji Hotels. All rights reserved.</span>
+    <div class="policy-links">
+      <a href="#">Privacy Statement</a>
+      <a href="#">Legal Terms</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+  
+</div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

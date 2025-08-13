@@ -10,6 +10,7 @@
 html, body {
   overflow-x: hidden;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 
@@ -77,6 +78,7 @@ html, body {
   height: auto;
   display: block;
   user-select: none;
+  margin-top: 80px;
 }
 
 /* Responsive: for tablets and smaller devices */
@@ -124,6 +126,18 @@ html, body {
   background: #fff7e6;
 }
 
+#call-btns img {
+  width: 70px;   /* increase this value slightly */
+  height: 70px;  /* keep aspect ratio */
+}
+.start-planning a {
+  display: block;               /* Fills the container */
+  color: #212529;                   /* White text */
+  text-decoration: none;         /* Remove underline */
+  font-weight: 300;
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif; 
+}
 .start-planning img.call-icon {
     width: 18px;
     height: 18px;
@@ -236,8 +250,8 @@ html, body {
 }
 
 .floating-icons button img {
-  width:60px;
-  height: 60px;
+  width:80px;
+  height: 80px;
 }
 
 
@@ -424,7 +438,7 @@ html, body {
   width: 130px;
   max-width: none; /* remove max-width to fix width to 150px */
   height: 34px; /* a bit less height, adjust as needed */
-  font-size: 12px;
+  font-size: 12px ;
   padding: 6px 12px; /* adjust padding to fit smaller size */
   display: flex;
   align-items: center;
@@ -435,8 +449,14 @@ html, body {
   border: none;
   cursor: pointer;
 }
-
-
+.start-planning a {
+  display: block;               /* Fills the container */
+  color: #212529;                   /* White text */
+  text-decoration: none;         /* Remove underline */
+  font-weight: 300;
+  font-size: 12px;
+  font-family: 'Work Sans', sans-serif; 
+}
   
   .logo {
     display: flex;
@@ -637,7 +657,7 @@ html, body {
 width: 397px;
   max-width: 100%;
   height: auto;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   padding: 60px 100px;
 }
 
@@ -812,7 +832,10 @@ width: 397px;
   .legacy-right {
     max-width: 100%;
   }
-
+#call-btns img {
+          width: clamp(30px, 20vw, 100px);   /* increase this value slightly */
+  height: clamp(30px, 14vw, 100px)  /* keep aspect ratio */
+}
   .legacy-left {
             padding: 0px 20px 20px 20px;
   }
@@ -1726,7 +1749,7 @@ width: 397px;
   left: -20px;
   z-index: -1;
   object-fit: contain;
-  opacity: 0.8; /* ← adjust as needed (0 = transparent, 1 = fully visible) */
+  opacity: 0.4; /* ← adjust as needed (0 = transparent, 1 = fully visible) */
 }
 .testimonial-section {
   position: relative; /* ← add this */
@@ -2575,7 +2598,7 @@ width: 397px;
    width: 150%;
   max-width: 100%; /* increased from 1000px */
   margin: auto;
-      padding-bottom: 20px;
+      padding-bottom: 50px;
     padding-top: 20px;
 }
 
@@ -2585,6 +2608,25 @@ width: 397px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.swiper-slide::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -45px; /* below the image */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #af9146;
+  font-family: 'Work Sans', sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show only for active slide */
+.swiper-slide-active::after {
+  opacity: 1;
 }
 
 .swiper-button-prev:hover,
@@ -2602,6 +2644,7 @@ width: 397px;
   justify-content: center ;
   align-items: center ;
 }
+
 .form-checkbox label {
   color: #000;
 }

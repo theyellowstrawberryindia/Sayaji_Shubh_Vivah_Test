@@ -18,10 +18,13 @@
       <div class="logo">
         <img src="assets/Logo_White.png" alt="Shubh Vivah Logo">
       </div>
-     <div class="start-planning">
-  <img src="assets/calls.svg" alt="Call Icon" class="call-icon" />
-  Enquire Now!
+   <div class="start-planning">
+  <a href="#enquiry-form">
+    <!-- <img src="assets/calls.svg" alt="Call Icon" class="call-icon" /> -->
+    Enquire Now!
+  </a>
 </div>
+
     </nav>
   <section class="hero">
     <div class="overlay"></div>
@@ -34,7 +37,7 @@
   <button id="whatsapp-btn" title="WhatsApp">
     <img src="assets/whatsapp.png" alt="WhatsApp">
   </button>
-  <button id="call-btn" title="Call">
+  <button id="call-btns" title="Call">
     <img src="assets/contact.png" alt="Call">
   </button>
 </div>
@@ -56,7 +59,7 @@
     <input type="checkbox" name="agreed" value="Yes" required> I agree to <a href="#">Terms & Conditions</a>.
   </label>
   <button type="submit" class="legacy-button">
-    <img src="assets/phone.svg" alt="Phone Icon">
+    <!-- <img src="assets/phone.svg" alt="Phone Icon"> -->
     <span>Get In Touch</span>
   </button>
 </form>
@@ -77,20 +80,33 @@
   <div class="carousel-header">
     <img src="assets/weCelebrate.svg" alt="We Celebrate Every Moment" class="main-title-image" />
   </div>
-    <section class="coverflow-carousel"> 
+<section class="coverflow-carousel"> 
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="assets/We_Celebrate_1.jpg" alt="Image 1"></div>
-      <div class="swiper-slide"><img src="assets/We_Celebrate_2.jpeg" alt="Image 2"></div>
-      <div class="swiper-slide"><img src="assets/We_Celebrate_3.jpg" alt="Image 3"></div>
-        <div class="swiper-slide"><img src="assets/We_Celebrate_4.JPG" alt="Image 2"></div>
-      <div class="swiper-slide"><img src="assets/We_Celebrate_5.jpeg" alt="Image 3"></div>
-        <div class="swiper-slide"><img src="assets/We_Celebrate_6.jpg" alt="Image 2"></div> 
+      <div class="swiper-slide" data-title="Engagement">
+        <img src="assets/We_Celebrate_1.jpg" alt="Image 1">
+      </div>
+      <div class="swiper-slide" data-title="Haldi">
+        <img src="assets/We_Celebrate_2.jpeg" alt="Image 2">
+      </div>
+      <div class="swiper-slide" data-title="Cocktail Party">
+        <img src="assets/We_Celebrate_3.jpg" alt="Image 3">
+      </div>
+      <div class="swiper-slide" data-title="Sangeet">
+        <img src="assets/We_Celebrate_4.JPG" alt="Image 4">
+      </div>
+      <div class="swiper-slide" data-title="Mehendi">
+        <img src="assets/We_Celebrate_5.jpeg" alt="Image 5">
+      </div>
+      <div class="swiper-slide" data-title="Shaadi Specialists">
+        <img src="assets/We_Celebrate_6.jpg" alt="Image 6">
+      </div>
     </div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
 </section>
+
 
 <div class="carousel-indicators">
   <span class="dot active"></span>
@@ -128,7 +144,7 @@
   <div class="dropdown-wrapper">
     <!-- Correct single select -->
     <select id="cityFilter" class="styled-city-dropdown">
-      <option value="" selected>Select City</option>
+      <option value="" selected>All Cities</option>
       <option value="indore">Indore</option>
       <option value="udaipur">Udaipur</option>
       <option value="kolhapur">Kolhapur</option>
@@ -235,7 +251,7 @@
    <div class="enquiry-wrapper">
   <!-- <img src="assets/hover_button.png" alt="Button Decoration" class="enquiry-decor" /> -->
   <button class="enquiry-button">
-    <img src="assets/phone_black.svg" alt="Phone Icon" class="phone-icon" />
+    <!-- <img src="assets/phone_black.svg" alt="Phone Icon" class="phone-icon" /> -->
     Enquire Now
   </button>
 </div>
@@ -278,7 +294,7 @@
     </button>
   </div> -->
 </section>
-<section class="form-section">
+<section id="enquiry-form" class="form-section">
   <div class="form-container">
     <img src="assets/Logo_black.png" alt="Shubh Vivah Logo" class="form-logo" />
     
@@ -312,7 +328,7 @@
         <option disabled selected>Select Wedding Type</option>
         <option>Destination</option>
         <option>Traditional</option>
-        <option>Beach</option>
+        <!-- <option>Beach</option> -->
       </select>
       <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
     </div>
@@ -325,6 +341,7 @@
         <option>Indore</option>
         <option>Mumbai</option>
         <option>Delhi</option>
+        <option>Others</option>
       </select>
       <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
     </div>
@@ -336,7 +353,10 @@
         <option disabled selected>Choose Venue</option>
         <option>Sayaji Indore</option>
         <option>Sayaji Pune</option>
-        <option>Sayaji Rajkot</option>
+        <option>Sayaji Raipur</option>
+        <option>Sayaji Kolhapur</option>
+        <option>Sayaji Vadodra</option>
+        <option>Sayaji Udaipur</option>
       </select>
       <img src="assets/arrow_vector.svg" class="custom-dropdown-arrow" alt="arrow" />
     </div>
@@ -388,16 +408,17 @@
 
         <div class="enquiry-wrapper-new">
   <!-- <img src="assets/hover_button_gold.png" alt="Button Decoration" class="enquiry-decor-new" /> -->
-  <button class="enquiry-button-new">
-    <img src="assets/arrow-right-circle.png" alt="Phone Icon" class="phone-icon" />
-    Book Now
-  </button>
+<button class="enquiry-button-new" onclick="window.location.href='thankyou.html'">
+  <img src="assets/arrow-right-circle.png" alt="Phone Icon" class="phone-icon" />
+  Book Now
+</button>
+
 </div>
       </div>
 
       <div class="form-right">
         <h3>Contact</h3>
-        <p>IND +91 0731 4006666</p>
+        <p>IND +91 731 4006666</p>
         <p>Sayaji Indore, H/1 , Scheme No.54, Vijay Nagar, Indore, Madhya Pradesh - 452010</p>
         <a href="mailto:enquiry@sayajigroup.com">enquiry@sayajigroup.com</a>
         <div class="social-icons">
